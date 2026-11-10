@@ -143,6 +143,12 @@ header.solid{background:rgba(27,18,12,.94);backdrop-filter:blur(10px);-webkit-ba
 .gallery span{position:absolute;left:14px;bottom:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.8)}
 @media(max-width:900px){.vis-grid{grid-template-columns:1fr}.vis-fig::before{display:none}.gallery{grid-template-columns:1fr 1fr}.gallery button:nth-child(1){grid-column:1/-1;aspect-ratio:16/10}.meas{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.vis-items{grid-template-columns:1fr}}
+.plan{margin-top:clamp(48px,7vw,88px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,5vw,72px);align-items:center;border-top:1px solid rgba(220,205,178,.25);padding-top:clamp(36px,5vw,64px)}
+.plan svg{width:100%;height:auto;background:#1B120C;border:1px solid rgba(232,163,58,.4)}
+.plan svg text{font-family:'Inter',sans-serif;fill:#DCCDB2;font-size:11px;letter-spacing:.06em}
+.plan h3{font-size:clamp(28px,3.4vw,42px);margin:10px 0 14px}
+.plan p{font-size:14.5px}.plan .tiny{font-size:12px;color:#B7A68B;margin-top:14px}
+@media(max-width:900px){.plan{grid-template-columns:1fr}}
 /* PHASES */
 .ph-grid{display:grid;grid-template-columns:minmax(260px,.38fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
 .ph-tabs{display:flex;flex-direction:column;position:sticky;top:calc(var(--nav) + 20px);border-top:1px solid var(--line)}
@@ -305,6 +311,18 @@ footer{background:var(--deep);color:#B7A68B;padding:56px 0 calc(40px + env(safe-
     </div>
   </div>
   <div class="gallery rv" id="v-gal"></div>
+  <div class="plan rv"><svg viewBox="0 0 600 380" role="img" aria-labelledby="pl-t"><title id="pl-t">Schéma de principe 2D</title>
+<rect x="0" y="300" width="600" height="80" fill="#2A1C14"/><text x="20" y="345" id="pl-street"></text>
+<path d="M0 300H600" stroke="#8f7c63" stroke-dasharray="4 5"/>
+<rect x="110" y="40" width="380" height="200" fill="#241710" stroke="#B88A3E" stroke-width="2"/><text x="300" y="130" text-anchor="middle" id="pl-kit"></text><text x="300" y="150" text-anchor="middle" id="pl-kit2" style="fill:#B7A68B;font-size:10px"></text>
+<rect x="110" y="240" width="380" height="60" fill="#3a2819" stroke="#E8A33A" stroke-width="2"/>
+<rect x="250" y="236" width="100" height="8" fill="#E8A33A"/><text x="300" y="276" text-anchor="middle" id="pl-win" style="fill:#F1C77A"></text>
+<path d="M110 28H490" stroke="#E8A33A"/><path d="M110 22v12M490 22v12" stroke="#E8A33A"/><text x="300" y="18" text-anchor="middle" id="pl-w" style="fill:#E8A33A;font-weight:600"></text>
+<path d="M510 240v60" stroke="#E8A33A"/><path d="M504 240h12M504 300h12" stroke="#E8A33A"/><text x="520" y="274" id="pl-d" style="fill:#E8A33A;font-weight:600"></text>
+<circle cx="300" cy="352" r="9" fill="#E8A33A"/><path d="M300 340V312" stroke="#E8A33A" stroke-width="2"/><path d="M296 318l4-8 4 8" fill="#E8A33A"/><text x="318" y="356" id="pl-cour"></text>
+<path d="M300 180V222" stroke="#F1C77A" stroke-width="2"/><path d="M295 214l5 10 5-10" fill="#F1C77A"/><text x="312" y="205" id="pl-flow" style="fill:#F1C77A"></text>
+<path d="M60 345l18 0" stroke="none"/></svg>
+<div><span class="label" id="pl-label"></span><h3 id="pl-h"></h3><p id="pl-p"></p><p class="tiny" id="pl-n"></p></div></div>
 </div></section>
 
 <section id="phases"><div class="wrap">
@@ -1383,6 +1401,7 @@ const UI={
   sel:'VOTRE SÉLECTION',tot0:'Aucune phase sélectionnée',wa:'Envoyer ma sélection sur WhatsApp',all:'Tout sélectionner',none:'Tout désélectionner',
   netbadge:'PRIX RÉSEAU −25 %',hintAll:'Parcours complet, de la conception à l\'ouverture. Prix non divisible, offre valable jusqu\'au 9 décembre 2026.',
   hintSome:'Tarif catalogue, toutes taxes comprises. Le prix réseau −25 % s\'applique au parcours complet (7 phases).',phases:'phase(s)',
+  plan:{label:'SCHÉMA DE PRINCIPE',h:'Un seul geste : commander, retirer, repartir.',p:"La façade de 3,8 m ne sert qu'à la vente : la commande entre par la fenêtre de retrait, le coursier ne pénètre jamais dans la cuisine. Un flux simple, sans salle ni croisement.",n:'Principe indicatif, non coté ni contractuel. Le plan détaillé est livré en phase 3.',street:'RUE / TROTTOIR',kit:'CUISINE CENTRALE',kit2:'agencement détaillé en phase 3',win:'RETRAIT',w:'3,8 m (façade)',d:'≈ 80 cm',cour:'Coursier / client',flow:'commande'},
   ill:"Illustration d'ambiance, non contractuelle.",close:'Fermer',
   wam:(sel,total,net)=>`Bonjour Abdelhafid, je suis intéressé par la proposition DOAN · Khaliat Al Nahl.\nPhases choisies : ${sel||'—'}\n${net?'Parcours complet (prix réseau −25 %)':'Tarif catalogue'} : ${total} SAR TTC.`},
  en:{menu:[['accueil','Home'],['apropos','About us'],['vision','Your vision'],['phases','The 7 phases'],['perimetre','Scope'],['conditions','Terms'],['mission','Your mission']],
@@ -1392,6 +1411,7 @@ const UI={
   sel:'YOUR SELECTION',tot0:'No phase selected',wa:'Send my selection on WhatsApp',all:'Select all',none:'Clear all',
   netbadge:'NETWORK PRICE −25%',hintAll:'Full journey, from design to opening. Indivisible price, offer valid until 9 December 2026.',
   hintSome:'Catalogue price, all taxes included. The −25% network price applies to the full journey (7 phases).',phases:'phase(s)',
+  plan:{label:'PRINCIPLE DIAGRAM',h:'One gesture: order, collect, go.',p:'The 3.8 m frontage is for selling only: orders pass through the pick-up window and couriers never enter the kitchen. A simple flow, with no dining room and no crossing.',n:'Indicative principle, not to scale or contractual. The detailed plan is delivered in phase 3.',street:'STREET / PAVEMENT',kit:'CENTRAL KITCHEN',kit2:'detailed layout in phase 3',win:'PICK-UP',w:'3.8 m (frontage)',d:'≈ 80 cm',cour:'Courier / customer',flow:'order'},
   ill:'Mood illustration, non-contractual.',close:'Close',
   wam:(sel,total,net)=>`Hello Abdelhafid, I am interested in the DOAN · Khaliat Al Nahl proposal.\nSelected phases: ${sel||'—'}\n${net?'Full journey (network price −25%)':'Catalogue price'}: ${total} SAR incl. taxes.`}
 };
@@ -1422,6 +1442,7 @@ function render(){
   $('v-note').textContent=v.note;
   const gi=['detail-wall','detail-pickup','detail-avenue'];
   $('v-gal').innerHTML=gi.map((g,i)=>`<button data-img="assets/${g}.jpg" data-alt="${esc(u.galalt[i])}"><img src="assets/${g}.jpg" alt="${esc(u.galalt[i])}" ><span>${esc(u.gal[i])}</span></button>`).join('');
+  const pl=u.plan;[['label','label'],['h','h'],['p','p'],['n','n'],['street','street'],['kit','kit'],['kit2','kit2'],['win','win'],['w','w'],['d','d'],['cour','cour'],['flow','flow']].forEach(([i,k])=>{$('pl-'+i).textContent=pl[k]});
   $('p-label').textContent=u.ph;$('p-title').innerHTML=`${esc(u.phasesTitle[0])} <em>${esc(u.phasesTitle[1])}</em>`;
   $('ph-tabs').innerHTML=d.phases.map((p,i)=>`<button class="ph-tab${i===cur?' on':''}" role="tab" data-i="${i}"><span class="n">${p.num}</span><span>${esc(p.title)}</span></button>`).join('');
   phase();
