@@ -1428,7 +1428,7 @@ const UI={
   wam:(sel,total,net)=>`Hello Abdelhafid, I am interested in the DOAN · Khaliat Al Nahl proposal.\nSelected phases: ${sel||'—'}\n${net?'Full journey (network price −25%)':'Catalogue price'}: ${total} SAR incl. taxes.`}
 };
 const $=id=>document.getElementById(id);
-let lang=(localStorage.getItem('doan-lang')||('fr'));
+let lang='en';
 let cur=0; const sel=new Set();
 const fmt=n=>n.toLocaleString('fr-FR').replace(/ | /g,' ');
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
