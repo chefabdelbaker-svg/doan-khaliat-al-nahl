@@ -1,0 +1,1488 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2A1C14">
+<title>DOAN · Khaliat Al Nahl — Proposition d'accompagnement</title>
+<meta name="description" content="Proposition d'accompagnement 360° pour DOAN · Khaliat Al Nahl, Rabwa, Riyadh — NAYISSORIA ADVISORY.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap">
+<style>
+:root{
+  --walnut:#2A1C14; --deep:#1B120C; --cream:#F5EBDA; --stone:#EBDDC3; --line:#DCCDB2;
+  --amber:#E8A33A; --honey:#A5601A; --brass:#B88A3E; --ink:#2A1C14; --body:#44352A; --muted:#7A6554;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --logo:'Montserrat','Inter',sans-serif;
+  --gutter:max(20px,env(safe-area-inset-left,0px)); --wrap:1180px; --nav:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 8px);-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--body);background:var(--cream);line-height:1.65;font-size:16px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.label{font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--honey)}
+.dark .label{color:var(--amber)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(34px,5vw,60px)}
+h2 em{font-style:normal;color:var(--honey)}
+.dark h2,.dark h3{color:var(--cream)} .dark h2 em{color:var(--amber)}
+.lead{font-size:clamp(16px,1.6vw,19px);max-width:62ch;color:var(--body)}
+.dark{background:var(--walnut);color:#DCCDB2}
+.dark .lead{color:#DCCDB2}
+section{padding:clamp(72px,10vw,132px) 0;position:relative}
+.sec-head{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(36px,5vw,64px)}
+.rule{width:44px;height:2px;background:var(--amber)}
+/* honeycomb texture */
+.hex-bg{position:absolute;inset:0;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cg fill='none' stroke='%23E8A33A' stroke-width='1.2'%3E%3Cpath d='M28 2l26 15v30L28 62 2 47V17z'/%3E%3Cpath d='M28 62v33M2 47L-24 62M54 47l26 15' /%3E%3C/g%3E%3C/svg%3E");background-size:56px 97px}
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--nav);padding-top:env(safe-area-inset-top,0px);transition:background .35s,box-shadow .35s,height .35s}
+header.solid{background:rgba(27,18,12,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(232,163,58,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav);gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+.brand svg{height:34px;width:auto}
+.brand b{font-family:var(--logo);font-weight:700;letter-spacing:.14em;font-size:17px}
+.menu{display:flex;gap:clamp(14px,2.2vw,30px);list-style:none}
+.menu a{white-space:nowrap;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:#EBDDC3;font-weight:500;padding:8px 0;position:relative;transition:color .2s}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1.5px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover,.menu a.on{color:#fff}.menu a:hover::after,.menu a.on::after{transform:scaleX(1)}
+.tools{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid rgba(235,221,195,.4);border-radius:99px;overflow:hidden}
+.lang button{padding:6px 12px;font-size:11px;letter-spacing:.12em;font-weight:600;color:#EBDDC3}
+.lang button.on{background:var(--amber);color:var(--deep)}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;background:var(--amber);color:var(--deep);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:transform .2s,background .2s}
+.cta:hover{background:#F2B652;transform:translateY(-1px)}
+.cta.ghost{background:transparent;color:var(--cream);border:1px solid rgba(235,221,195,.55)}
+.cta.ghost:hover{background:rgba(235,221,195,.12)}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.burger i{display:block;width:24px;height:2px;background:var(--cream);position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:24px;height:2px;background:var(--cream);transition:transform .3s}
+.burger i::before{top:-7px}.burger i::after{top:7px}
+@media(max-width:1340px){.tools .cta{display:none}}
+@media(max-width:1060px){
+  .menu,.tools .cta{display:none}.burger{display:flex}
+  body.open .menu{display:flex;position:fixed;inset:var(--nav) 0 0 0;background:var(--deep);flex-direction:column;padding:32px 28px;gap:6px;z-index:49}
+  body.open .menu a{font-size:15px;padding:16px 0;border-bottom:1px solid rgba(220,205,178,.15)}
+  body.open{overflow:hidden}
+}
+/* HERO */
+.hero{min-height:100svh;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);overflow:hidden;background:var(--deep);color:var(--cream)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:28px;padding:calc(var(--nav) + 40px) clamp(24px,5vw,80px) 64px max(24px,calc((100vw - var(--wrap))/2 + 20px));position:relative;z-index:1}
+.hero-copy .by{display:flex;flex-direction:column;gap:2px}
+.hero h1{font-size:clamp(48px,7vw,104px);color:var(--cream);line-height:.98}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2vw,26px);color:#F1C77A}
+.hero .sub{font-size:clamp(16px,1.5vw,18px);max-width:44ch;color:#DCCDB2}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap;padding-top:26px;margin-top:6px;border-top:1px solid rgba(241,199,122,.35)}
+.hero-meta div{display:flex;flex-direction:column;gap:3px}
+.hero-meta small{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#C9B89B}
+.hero-meta span{font-family:var(--serif);font-size:22px;color:var(--cream)}
+.hero-img{position:relative;min-height:70svh;overflow:hidden}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 30%;animation:drift 22s ease-out both}
+@keyframes drift{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--deep) 0%,rgba(27,18,12,0) 22%)}
+.scroll{position:absolute;left:max(24px,calc((100vw - var(--wrap))/2 + 20px));bottom:28px;display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#C9B89B;z-index:2}
+.scroll i{display:block;width:1px;height:34px;background:linear-gradient(var(--amber),transparent);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+@media(max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto}
+  .hero-img{order:-1;min-height:64svh}.hero-img::after{background:linear-gradient(180deg,rgba(27,18,12,.45) 0%,rgba(27,18,12,0) 25%,rgba(27,18,12,0) 70%,var(--deep) 100%)}
+  .hero-copy{padding:28px 24px 72px}.scroll{display:none}
+  .hero-img img{object-position:30% 20%}
+}
+/* ABOUT */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-bottom:clamp(48px,7vw,88px)}
+.card{border-top:2px solid var(--amber);padding-top:18px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:32px}
+.work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,64px)}
+.work-item{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.work-item .n{font-family:var(--serif);font-size:38px;line-height:1;color:var(--honey);min-width:34px}
+.work-item b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px}
+@media(max-width:820px){.cards,.work{grid-template-columns:1fr}}
+/* ERRORS */
+.errs{background:var(--stone)}
+.err-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.err{padding:26px 22px 26px 0;border-top:1px solid var(--brass);display:flex;flex-direction:column;gap:12px}
+.err .n{font-family:var(--serif);font-size:54px;line-height:1;color:var(--honey)}
+.err h3{font-size:22px;line-height:1.15}
+.err p{font-size:14px}
+@media(max-width:1000px){.err-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}}
+@media(max-width:560px){.err-list{grid-template-columns:1fr}}
+/* OBJECTIVE */
+.obj-row{display:flex;gap:22px;align-items:baseline;padding:18px 0;border-bottom:1px solid rgba(220,205,178,.2);cursor:pointer;transition:padding .25s}
+.obj-row:hover{padding-left:14px}
+.obj-row .n{font-family:var(--serif);font-size:34px;color:var(--amber);min-width:34px}
+.obj-row b{display:block;color:var(--cream);font-weight:600;font-size:17px}
+.obj-row span{font-size:14px;color:#C9B89B}
+.obj-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
+@media(max-width:900px){.obj-grid{grid-template-columns:1fr}}
+/* VISION */
+.vision{background:var(--deep);color:#DCCDB2;overflow:hidden}
+.vis-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:clamp(32px,6vw,92px);align-items:center}
+.vis-fig{position:relative}
+.vis-fig img{width:100%;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+.vis-fig::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--amber);opacity:.55;z-index:-1}
+.vis-fig figcaption{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#B7A68B;margin-top:16px}
+.vis-items{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;margin:34px 0}
+.vis-item{border-top:2px solid var(--amber);padding-top:12px}
+.vis-item .label{display:block;margin-bottom:6px}
+.vis-item p{font-size:14.5px;color:#DCCDB2}
+.meas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding-top:26px;border-top:1px solid rgba(220,205,178,.25)}
+.meas b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.4vw,44px);color:var(--cream);line-height:1}
+.meas small{font-size:12px;color:#B7A68B;line-height:1.4;display:block;margin-top:6px}
+.vis-note{font-size:12.5px;color:#B7A68B;margin-top:26px;max-width:60ch}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:16px;margin-top:clamp(48px,7vw,88px)}
+.gallery button{position:relative;overflow:hidden;aspect-ratio:4/5;background:#000;display:block}
+.gallery button:nth-child(1){aspect-ratio:auto}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gallery button:hover img{transform:scale(1.05)}
+.gallery span{position:absolute;left:14px;bottom:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+@media(max-width:900px){.vis-grid{grid-template-columns:1fr}.vis-fig::before{display:none}.gallery{grid-template-columns:1fr 1fr}.gallery button:nth-child(1){grid-column:1/-1;aspect-ratio:16/10}.meas{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.vis-items{grid-template-columns:1fr}}
+/* PHASES */
+.ph-grid{display:grid;grid-template-columns:minmax(260px,.38fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
+.ph-tabs{display:flex;flex-direction:column;position:sticky;top:calc(var(--nav) + 20px);border-top:1px solid var(--line)}
+.ph-tab{display:flex;gap:16px;align-items:baseline;text-align:left;padding:16px 8px 16px 0;border-bottom:1px solid var(--line);transition:padding .25s,color .25s;color:var(--body)}
+.ph-tab .n{font-family:var(--serif);font-size:28px;color:var(--brass);min-width:26px;transition:color .25s}
+.ph-tab span:last-child{font-size:14.5px;font-weight:500;line-height:1.35}
+.ph-tab:hover{padding-left:10px}
+.ph-tab.on{color:var(--ink);padding-left:14px;box-shadow:inset 3px 0 0 var(--amber)}.ph-tab.on .n{color:var(--honey)}
+.ph-panel{background:#fff8ec;border:1px solid var(--line);padding:clamp(24px,4vw,52px);min-height:420px;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ph-head{display:flex;gap:22px;align-items:flex-end;margin-bottom:18px}
+.ph-head .big{font-family:var(--serif);font-size:clamp(70px,9vw,120px);line-height:.8;color:var(--amber)}
+.ph-head h3{font-size:clamp(28px,3.6vw,44px)}
+.ph-intro{margin-bottom:30px;max-width:64ch}
+.blocks{display:grid;gap:30px 34px}
+.blocks.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.blocks.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.blk{border-top:2px solid var(--amber);padding-top:14px;display:flex;flex-direction:column;gap:12px}
+.blk h4{font-family:var(--serif);font-weight:500;font-size:25px;line-height:1.12;color:var(--ink)}
+.blk ul{padding-left:18px;display:flex;flex-direction:column;gap:7px;font-size:14px}
+.blk li::marker{color:var(--amber)}
+.deliv{border-left:2px solid var(--amber);padding:3px 0 3px 14px;font-size:14px;color:var(--ink);margin-top:auto}
+.deliv small{display:block;font-size:10px;letter-spacing:.24em;font-weight:600;color:var(--honey);margin-bottom:2px}
+.expect{margin-top:30px;background:var(--stone);padding:20px 24px}
+.expect .label{display:block;margin-bottom:6px}
+.expect p{font-size:14px}
+@media(max-width:1100px){.blocks.c3{grid-template-columns:1fr}}
+@media(max-width:980px){.ph-grid{grid-template-columns:1fr}.ph-tabs{position:static;flex-direction:row;overflow-x:auto;border-top:0;gap:0;scrollbar-width:none;margin:0 -20px;padding:0 20px}.ph-tab{flex-direction:column;gap:2px;min-width:132px;border:1px solid var(--line);border-right:0;padding:12px 14px!important;box-shadow:none!important}.ph-tab:last-child{border-right:1px solid var(--line)}.ph-tab.on{background:var(--walnut);color:var(--cream)}.ph-tab.on .n{color:var(--amber)}.ph-tab span:last-child{font-size:12px}.blocks.c2{grid-template-columns:1fr}}
+/* SCOPE */
+.scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5vw,80px)}
+.scope-col ul{list-style:none;margin-top:18px}
+.scope-col li{padding:14px 0 14px 34px;border-bottom:1px solid rgba(220,205,178,.22);position:relative;font-size:15px}
+.scope-col li::before{content:"";position:absolute;left:4px;top:21px;width:14px;height:8px;border-left:2px solid var(--amber);border-bottom:2px solid var(--amber);transform:rotate(-45deg)}
+.scope-col.no li::before{border:0;width:14px;height:2px;background:#8f7c63;top:26px;transform:none}
+.scope-col.no li{color:#B7A68B}
+.commit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:clamp(40px,6vw,72px)}
+.commit div{border:1px solid rgba(232,163,58,.5);padding:26px}
+.commit b{display:block;font-family:var(--serif);font-weight:500;font-size:30px;color:var(--cream);margin-bottom:8px}
+.commit p{font-size:14px}
+@media(max-width:820px){.scope-grid,.commit{grid-template-columns:1fr}}
+/* TERMS */
+.acc{border-top:1px solid var(--line);max-width:900px}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;text-align:left;font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);color:var(--ink)}
+.acc-q i{position:relative;width:18px;height:18px;flex-shrink:0}
+.acc-q i::before,.acc-q i::after{content:"";position:absolute;left:0;top:8px;width:18px;height:2px;background:var(--honey);transition:transform .3s}
+.acc-q i::after{transform:rotate(90deg)}
+.acc-item.open .acc-q i::after{transform:rotate(0)}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.acc-a>div{overflow:hidden}.acc-a p{padding:0 40px 24px 0;max-width:70ch}
+.acc-item.open .acc-a{grid-template-rows:1fr}
+/* MISSION */
+.mission{background:var(--stone)}
+.m-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:start}
+.m-rows{border-top:1px solid var(--line)}
+.m-row{display:flex;align-items:center;gap:18px;padding:18px 6px;border-bottom:1px solid var(--line);cursor:pointer;user-select:none;transition:background .2s}
+.m-row:hover{background:rgba(232,163,58,.1)}
+.m-row .n{font-family:var(--serif);font-size:28px;color:var(--honey);min-width:26px}
+.m-row .t{flex:1;font-size:15.5px;color:var(--ink);font-weight:500}
+.m-row .p{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.m-row .p small{font-weight:400;color:var(--muted);font-size:11px;margin-left:3px}
+.chk{width:24px;height:24px;border:1.6px solid var(--amber);border-radius:3px;display:grid;place-items:center;flex-shrink:0;transition:background .2s}
+.chk svg{width:14px;height:14px;opacity:0;stroke:var(--deep);stroke-width:3;fill:none;transition:opacity .2s}
+.m-row.sel .chk{background:var(--amber)}.m-row.sel .chk svg{opacity:1}
+.m-row:focus-visible{outline:2px solid var(--honey);outline-offset:2px}
+.m-all{margin-top:16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--honey);text-decoration:underline;text-underline-offset:4px}
+.m-card{background:var(--walnut);color:#DCCDB2;padding:clamp(26px,3.4vw,44px);position:sticky;top:calc(var(--nav) + 20px);display:flex;flex-direction:column;gap:18px;border-top:3px solid var(--amber)}
+.m-card .sum{display:flex;flex-direction:column;gap:4px;font-size:14px}
+.m-card .strike{font-size:15px;text-decoration:line-through;color:#B7A68B;min-height:22px}
+.m-card .total{font-family:var(--serif);font-size:clamp(46px,5.6vw,68px);color:var(--cream);line-height:1;font-variant-numeric:lining-nums}
+.m-card .total small{font-family:var(--sans);font-size:14px;letter-spacing:.2em;color:var(--amber);margin-left:8px}
+.m-card .badge{display:inline-block;align-self:flex-start;background:var(--amber);color:var(--deep);font-size:10.5px;letter-spacing:.2em;font-weight:700;padding:5px 10px;text-transform:uppercase}
+.m-card .hint{font-size:13px;color:#B7A68B}
+.m-card .cta{justify-content:center}
+.m-card .who{border-top:1px solid rgba(220,205,178,.22);padding-top:16px;font-size:13px}
+.m-card .who b{color:var(--cream);font-weight:600;display:block}
+@media(max-width:900px){.m-grid{grid-template-columns:1fr}.m-card{position:static}}
+/* FOOTER */
+footer{background:var(--deep);color:#B7A68B;padding:56px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot .brand{margin-bottom:12px}
+.foot b{color:var(--cream);font-weight:600}
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,6,3,.94);display:none;align-items:center;justify-content:center;padding:24px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:94vw;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:18px;width:48px;height:48px;color:#fff;font-size:34px}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header id="top-nav">
+  <div class="wrap nav">
+    <a class="brand" href="#accueil" aria-label="DOAN">
+      <svg viewBox="-52 -30 104 106" aria-hidden="true"><use href="#mk"/></svg><b>DOAN</b>
+    </a>
+    <ul class="menu" id="menu"></ul>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Langue"><button data-l="fr">FR</button><button data-l="en">EN</button></div>
+      <a class="cta" href="#mission" id="navcta"></a>
+      <button class="burger" id="burger" aria-label="Menu"><i></i></button>
+    </div>
+  </div>
+</header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="mk" stroke-width="2.6" stroke-linejoin="round" stroke="#F5EBDA">
+    <polygon points="0.0,-27.0 23.4,-13.5 23.4,13.5 0.0,27.0 -23.4,13.5 -23.4,-13.5" fill="#E8A33A"/>
+    <polygon points="-26.0,18.0 -2.6,31.5 -2.6,58.5 -26.0,72.0 -49.4,58.5 -49.4,31.5" fill="#C97B16"/>
+    <polygon points="26.0,18.0 49.4,31.5 49.4,58.5 26.0,72.0 2.6,58.5 2.6,31.5" fill="#F4E6C8"/>
+  </g></defs></svg>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="hero-copy">
+    <div class="by"><span class="label" style="color:var(--amber)">NAYISSORIA ADVISORY</span></div>
+    <div class="label" id="h-label" style="color:#F1C77A"></div>
+    <h1 id="h-title"></h1>
+    <p class="tag">From Vision to Execution.</p>
+    <p class="sub" id="h-sub"></p>
+    <div class="btns"><a class="cta" href="#vision" id="h-b1"></a><a class="cta ghost" href="#mission" id="h-b2"></a></div>
+    <div class="hero-meta">
+      <div><small id="h-pl"></small><span>DOAN · Khaliat Al Nahl</span></div>
+      <div><small id="h-loc"></small><span>Rabwa, Riyadh</span></div>
+      <div><small id="h-by"></small><span>Abdelhafid Arbi</span></div>
+    </div>
+  </div>
+  <div class="hero-img"><img src="assets/facade.jpg" alt="DOAN — façade de vente à emporter, Riyadh (illustration d'ambiance)" fetchpriority="high"></div>
+  <div class="scroll"><i></i><span id="h-scroll"></span></div>
+</section>
+
+<section id="apropos"><div class="wrap">
+  <div class="sec-head rv"><span class="label" id="a-label"></span><div class="rule"></div><h2 id="a-title"></h2><p class="lead" id="a-p"></p></div>
+  <div class="cards rv" id="a-cards"></div>
+  <div class="sec-head rv" style="margin-bottom:12px"><span class="label" id="a-wl"></span></div>
+  <div class="work rv" id="a-work"></div>
+</div></section>
+
+<section class="errs" id="erreurs"><div class="wrap">
+  <div class="sec-head rv"><span class="label" id="e-label"></span><div class="rule"></div><h2 id="e-title"></h2><p class="lead" id="e-p"></p></div>
+  <div class="err-list rv" id="e-list"></div>
+</div></section>
+
+<section class="dark" id="objectif"><div class="hex-bg"></div><div class="wrap obj-grid" style="position:relative">
+  <div class="sec-head rv"><span class="label" id="o-label"></span><div class="rule"></div><h2 id="o-title"></h2><p class="lead" id="o-p"></p></div>
+  <div class="rv"><span class="label" id="o-pl" style="display:block;margin-bottom:10px"></span><div id="o-list"></div></div>
+</div></section>
+
+<section class="vision dark" id="vision"><div class="hex-bg"></div><div class="wrap" style="position:relative">
+  <div class="vis-grid">
+    <figure class="vis-fig rv"><img src="assets/facade.jpg" alt="" ><figcaption id="v-cap"></figcaption></figure>
+    <div class="rv">
+      <span class="label" id="v-label"></span><div class="rule" style="margin:18px 0"></div>
+      <h2 id="v-title"></h2><p class="lead" id="v-lead" style="margin-top:22px"></p>
+      <div class="vis-items" id="v-items"></div>
+      <div class="meas" id="v-meas"></div>
+      <p class="vis-note" id="v-note"></p>
+    </div>
+  </div>
+  <div class="gallery rv" id="v-gal"></div>
+</div></section>
+
+<section id="phases"><div class="wrap">
+  <div class="sec-head rv"><span class="label" id="p-label"></span><div class="rule"></div><h2 id="p-title"></h2></div>
+  <div class="ph-grid rv"><div class="ph-tabs" id="ph-tabs" role="tablist"></div><div class="ph-panel" id="ph-panel" role="tabpanel" aria-live="polite"></div></div>
+</div></section>
+
+<section class="dark" id="perimetre"><div class="hex-bg"></div><div class="wrap" style="position:relative">
+  <div class="sec-head rv"><span class="label" id="s-label"></span><div class="rule"></div><h2 id="s-title"></h2></div>
+  <div class="scope-grid rv"><div class="scope-col"><span class="label" id="s-inc-l"></span><ul id="s-inc"></ul></div><div class="scope-col no"><span class="label" id="s-exc-l" style="color:#B7A68B"></span><ul id="s-exc"></ul></div></div>
+  <span class="label rv" id="s-cm-l" style="display:block;margin-top:clamp(40px,6vw,72px)"></span>
+  <div class="commit rv" id="s-cm" style="margin-top:18px"></div>
+</div></section>
+
+<section id="conditions"><div class="wrap">
+  <div class="sec-head rv"><span class="label" id="t-label"></span><div class="rule"></div><h2 id="t-title"></h2></div>
+  <div class="acc rv" id="t-acc"></div>
+</div></section>
+
+<section class="mission" id="mission"><div class="wrap">
+  <div class="sec-head rv"><span class="label" id="m-label"></span><div class="rule"></div><h2 id="m-title"></h2><p class="lead" id="m-note"></p></div>
+  <div class="m-grid rv">
+    <div><div class="m-rows" id="m-rows"></div><button class="m-all" id="m-all"></button></div>
+    <aside class="m-card" aria-live="polite">
+      <span class="label" id="m-sel"></span>
+      <div class="sum"><div class="strike" id="m-strike"></div><div class="total"><span id="m-total">0</span><small>SAR</small></div></div>
+      <span class="badge" id="m-badge" hidden></span>
+      <p class="hint" id="m-hint"></p>
+      <a class="cta" id="m-wa" href="#" target="_blank" rel="noopener"></a>
+      <div class="who"><b>Abdelhafid Arbi · Riyadh</b><span id="m-phone">WhatsApp +966 50 788 1567</span></div>
+    </aside>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div><a class="brand" href="#accueil"><svg viewBox="-52 -30 104 106" style="height:30px"><use href="#mk"/></svg><b>DOAN</b></a>
+  <div id="f-ref">RÉF. NAY-KAN-2026-001 · 9 NOVEMBRE 2026</div><div id="f-ill" style="margin-top:6px"></div></div>
+  <div><b>NAYISSORIA ADVISORY</b><br><span id="f-sig">From Vision to Execution.</span></div>
+</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true"><button id="lb-x" aria-label="Fermer">×</button><img id="lb-img" alt=""></div>
+
+<script>
+const DATA={
+ "fr": {
+  "about": {
+   "label": "QUI SOMMES-NOUS",
+   "title": "Un cabinet de conseil stratégique et opérationnel, spécialisé dans le Food & Beverage.",
+   "title1": "Un cabinet de conseil stratégique et opérationnel,",
+   "title2": "spécialisé dans le Food & Beverage.",
+   "p": "NAYISSORIA ADVISORY accompagne les porteurs de projet qui souhaitent créer, optimiser ou développer une activité de boulangerie, pâtisserie, café ou restauration, avec une approche de terrain : du concept à l'ouverture, puis dans l'exploitation.",
+   "cards": [
+    [
+     "Créer",
+     "Structurer une idée, valider le lieu, concevoir l'activité et préparer l'ouverture."
+    ],
+    [
+     "Optimiser",
+     "Améliorer la production, l'organisation, les coûts et la qualité d'une activité existante."
+    ],
+    [
+     "Développer",
+     "Ouvrir de nouveaux points de vente, structurer la croissance et former les équipes."
+    ]
+   ],
+   "wlabel": "NOTRE FAÇON DE TRAVAILLER",
+   "work": [
+    [
+     "Un pilotage global.",
+     "Un interlocuteur unique pour coordonner conception, travaux, équipements, produits et équipes."
+    ],
+    [
+     "Le terrain avant la théorie.",
+     "Vingt ans d'expérience en boulangerie-pâtisserie, en France et à l'international, notamment en Uruguay et en Arabie Saoudite."
+    ],
+    [
+     "Les bonnes personnes aux bonnes places.",
+     "Un réseau de designers, contractors, fournisseurs, chefs et spécialistes mobilisés selon les besoins du projet."
+    ],
+    [
+     "Des livrables précis.",
+     "Chaque étape se termine par un document ou un résultat concret, validé avec vous."
+    ]
+   ]
+  },
+  "errors": {
+   "label": "POURQUOI UN ACCOMPAGNEMENT",
+   "t1": "Les cinq erreurs",
+   "t2": "qui coûtent le plus cher.",
+   "p": "Dans l'ouverture d'une boulangerie ou d'un café, la plupart des mauvaises surprises viennent de décisions prises trop tôt, dans le mauvais ordre. Le parcours en phases sert à les éviter.",
+   "items": [
+    [
+     "Choisir le local avant de l'avoir analysé",
+     "Surfaces, cloisons, accès, réseaux d'eau, d'électricité et d'extraction : tout doit être vérifié avant de figer le plan."
+    ],
+    [
+     "Acheter les équipements avant de figer le menu",
+     "Ce sont les produits et les process qui déterminent les machines, pas l'inverse."
+    ],
+    [
+     "Construire un budget sans marge de sécurité",
+     "Équipements, aménagements, démarrage : le budget réel dépasse presque toujours la première estimation."
+    ],
+    [
+     "Dépendre d'un seul prestataire",
+     "Sans devis comparés ni deuxième option, délais et prix échappent au client."
+    ],
+    [
+     "Négliger l'équipe et la formation",
+     "Une équipe recrutée tard et formée vite se voit dès les premiers jours d'ouverture."
+    ]
+   ]
+  },
+  "obj": {
+   "label": "OBJECTIF DE LA MISSION",
+   "t1": "Transformer un projet initial en une activité",
+   "t2": "structurée, équipée, organisée",
+   "t3": "et prête à fonctionner.",
+   "p": "NAYISSORIA ADVISORY intervient comme partenaire de pilotage, de conception et d'exécution opérationnelle, en coordination avec le porteur de projet et les prestataires spécialisés.",
+   "plabel": "LE PARCOURS EN 7 PHASES",
+   "phases": [
+    [
+     "Cadrage et faisabilité du local",
+     "Poser le projet, vérifier ce que le local permet."
+    ],
+    [
+     "Design et identité visuelle",
+     "Donner au lieu et à la marque la même identité."
+    ],
+    [
+     "Menu, layout et équipements",
+     "Définir ce que vous vendez, dessiner l'espace, puis choisir les machines."
+    ],
+    [
+     "Conception et coordination des travaux",
+     "Piloter le chantier jusqu'à la réception."
+    ],
+    [
+     "Budget, CAPEX et plan de rentabilité",
+     "Savoir combien investir et à partir de quand l'activité couvre ses charges."
+    ],
+    [
+     "Fournisseurs, production et SOP",
+     "Sécuriser les achats, organiser la production, écrire les procédures."
+    ],
+    [
+     "Équipe et ouverture",
+     "Recruter, former, ouvrir, puis corriger les premiers jours."
+    ]
+   ]
+  },
+  "vision": {
+   "label": "VOTRE VISION",
+   "t1": "Une devanture qui donne envie,",
+   "t2": "pensée pour la vente à emporter.",
+   "cap": "ILLUSTRATION D'AMBIANCE, NON CONTRACTUELLE",
+   "lead": "Voici comment la façade de votre local, 3,8 m de large devant la cuisine centrale, pourrait se présenter : une vitrine fermée sur la production, sans salle, avec un guichet de retrait pour les livreurs et les clients.",
+   "items": [
+    [
+     "LE NOM",
+     "DOAN, avec « Khaliat Al Nahl » (خلية النحل), le nid d'abeille en arabe."
+    ],
+    [
+     "LE LOGO",
+     "Trois hexagones de nid d'abeille, dont un ambre miel, rétroéclairé à la tombée de la nuit."
+    ],
+    [
+     "LA FAÇADE",
+     "Pierre claire, motif en nid d'abeille, soubassement continu et fenêtre sur le fournil : le savoir-faire se voit, la cuisine reste fermée."
+    ],
+    [
+     "LE RETRAIT",
+     "Enseigne PICK-UP, plaque en laiton et comptoir en pierre : on récupère sa commande sans entrer."
+    ]
+   ],
+   "meas": [
+    [
+     "3,8 m",
+     "largeur de la façade"
+    ],
+    [
+     "≈ 80 cm",
+     "profondeur du retrait (proposition)"
+    ],
+    [
+     "0",
+     "salle client, aucun accès à la cuisine"
+    ],
+    [
+     "100 %",
+     "vente à emporter et livraison"
+    ]
+   ],
+   "note": "Le design, les matériaux et le nom sont une proposition de départ, à affiner en phase 2. Les dimensions sont indicatives et à valider en phases 1 et 2."
+  },
+  "scope": {
+   "label": "PÉRIMÈTRE",
+   "t1": "Ce que comprennent",
+   "t2": "les honoraires.",
+   "inc_l": "INCLUS",
+   "inc": [
+    "Conseil stratégique et opérationnel.",
+    "Structuration et pilotage du projet.",
+    "Coordination des intervenants : designer, contractors, fournisseurs.",
+    "Rédaction des documents : fiches techniques, cahiers des charges, procédures, dossiers.",
+    "Formation pratique des équipes de production, selon les phases retenues."
+   ],
+   "exc_l": "NON INCLUS",
+   "exc": [
+    "Travaux et contractors.",
+    "Équipements et petit matériel.",
+    "Prestations externes de design et d'identité visuelle.",
+    "Frais administratifs, taxes, licences et autorisations, pris en charge par le client.",
+    "Plans d'exécution, ingénierie technique et maîtrise d'œuvre réglementée.",
+    "Honoraires de tiers : avocat, comptable, consultant hygiène.",
+    "Assurances.",
+    "Déplacements en dehors de Riyadh."
+   ],
+   "cm_l": "MES ENGAGEMENTS",
+   "cm": [
+    [
+     "2 révisions",
+     "Chaque livrable majeur bénéficie de deux séries de modifications incluses, selon vos retours."
+    ],
+    [
+     "Réponse sous 48 h",
+     "Pour les questions urgentes, 48 heures ouvrées au maximum. Sous 5 jours ouvrés pour les autres."
+    ],
+    [
+     "30 jours de support",
+     "Après la remise de chaque livrable majeur, pour clarifications et ajustements mineurs."
+    ]
+   ]
+  },
+  "terms": {
+   "label": "CONDITIONS",
+   "t1": "Un cadre clair",
+   "t2": "pour avancer sereinement.",
+   "items": [
+    [
+     "Phases indivisibles",
+     "Chaque phase est facturée en entier. Si seules certaines parties d'une phase sont retenues, le prix de la phase reste inchangé."
+    ],
+    [
+     "Paiement",
+     "Parcours complet : 40 % à la signature, 30 % à la fin des travaux (phase 4), 30 % avant l'ouverture (début de la phase 7). Phases à la carte : 100 % à l'ouverture de chaque phase."
+    ],
+    [
+     "Modifications du projet",
+     "Toute modification importante du périmètre (changement de concept, surface nettement plus grande, services ajoutés) fait l'objet d'un avenant précisant la nature du changement, l'impact sur les délais et sur les honoraires."
+    ],
+    [
+     "Dépassement de budget",
+     "Si le CAPEX réel dépasse de plus de 20 % l'estimation validée, une réunion de recalibrage est organisée pour ajuster le projet ou son périmètre."
+    ],
+    [
+     "Délais externes",
+     "Les délais des autorisations, des livraisons, des travaux et des prestataires tiers ne dépendent pas de NAYISSORIA ADVISORY et ne donnent pas lieu à pénalités."
+    ],
+    [
+     "Suspension",
+     "L'accompagnement peut être suspendu sans pénalité en cas de blocage indépendant de la volonté des parties, d'impossibilité d'accéder au site ou de décision du client de suspendre le projet. Seules les phases réalisées et validées restent dues."
+    ],
+    [
+     "Arrêt anticipé",
+     "À la carte : arrêt possible à la fin de chaque phase validée, sans pénalité. Parcours complet : en cas d'arrêt avant la fin, le prix réseau est annulé et les phases réalisées sont facturées au prix catalogue. Les livrables des phases payées restent la propriété du client."
+    ],
+    [
+     "Confidentialité et validité",
+     "Les informations échangées sont strictement confidentielles. Cette offre est valable 30 jours à compter de sa date d'émission."
+    ]
+   ]
+  },
+  "mission": {
+   "label": "COMPOSEZ VOTRE MISSION",
+   "t1": "Cochez les phases qui vous intéressent,",
+   "t2": "je prépare votre devis sur mesure.",
+   "note": "Honoraires en riyals saoudiens (SAR), toutes taxes comprises, au prix catalogue.",
+   "rows": [
+    [
+     "Cadrage et faisabilité du local",
+     9000
+    ],
+    [
+     "Design et identité visuelle",
+     4000
+    ],
+    [
+     "Menu, layout et équipements",
+     16000
+    ],
+    [
+     "Conception et coordination des travaux",
+     10000
+    ],
+    [
+     "Budget, CAPEX et plan de rentabilité",
+     6000
+    ],
+    [
+     "Fournisseurs, production et SOP",
+     10000
+    ],
+    [
+     "Équipe et ouverture",
+     18000
+    ]
+   ],
+   "cat": "TOTAL CATALOGUE · 7 PHASES",
+   "net_l": "PARCOURS COMPLET · PRIX RÉSEAU −25 %",
+   "net_t": "Les 7 phases, de la conception à l'ouverture",
+   "net_n": "Prix non divisible, offre valable jusqu'au 9 décembre 2026.",
+   "cta": "Dites-moi les phases qui vous intéressent : je vous prépare un devis sur mesure, avec le calendrier adapté à votre ouverture."
+  },
+  "phases": [
+   {
+    "num": "1",
+    "title": "Cadrage et faisabilité du local",
+    "intro": "On part de ce que vous m'avez déjà transmis (documents, plans, questionnaire) pour poser un cadre clair : ce que vous voulez ouvrir, pour qui, avec quelles priorités. Puis on vérifie ce que le local permet réellement, avant toute décision de conception.",
+    "blocks": [
+     {
+      "label": "PARTIE A",
+      "title": "Cadrage et analyse du projet",
+      "items": [
+       "Présentation et structuration du projet.",
+       "Analyse des documents et informations transmis.",
+       "Définition du concept et de son positionnement.",
+       "Identification des besoins opérationnels.",
+       "Définition des objectifs, contraintes et priorités.",
+       "Élaboration d'une feuille de route générale."
+      ],
+      "deliv": "Dossier de cadrage et plan directeur du projet."
+     },
+     {
+      "label": "PARTIE B",
+      "title": "Analyse du local et faisabilité spatiale",
+      "items": [
+       "Lecture et analyse des plans existants.",
+       "Vérification des dimensions et des surfaces.",
+       "Identification des cloisons pouvant être supprimées, sous réserve de vérification technique.",
+       "Analyse des accès, escaliers, circulations et réseaux.",
+       "Étude des différentes configurations de surfaces.",
+       "Réalisation d'un pré-layout fonctionnel (le layout détaillé est conçu en phase 3).",
+       "Identification des contraintes techniques et réglementaires, notamment pour les éventuels logements du personnel."
+      ],
+      "deliv": "Étude des surfaces et proposition de zoning."
+     }
+    ],
+    "expect": "Les plans cotés du local et des photos, le questionnaire de cadrage complété, et l'accès au site pour une visite à Riyadh. Les vérifications techniques réglementées restent confiées aux professionnels compétents."
+   },
+   {
+    "num": "2",
+    "title": "Design et identité visuelle",
+    "intro": "Le lieu et la marque doivent raconter la même histoire. Je fais le lien entre votre concept, le designer d'intérieur et l'agence d'identité visuelle, pour que ce qui est dessiné soit aussi ce qui fonctionne au quotidien.",
+    "blocks": [
+     {
+      "label": "CE QUE JE FAIS",
+      "title": null,
+      "items": [
+       "Définition de l'univers de marque et de l'ambiance du lieu.",
+       "Coordination avec le designer d'intérieur et l'agence d'identité visuelle.",
+       "Création ou adaptation du nom, du logo et de la charte graphique.",
+       "Conception des supports : menus, packaging, signalétique, uniformes.",
+       "Vérification de la cohérence entre le concept, les espaces et l'image de marque.",
+       "Préparation des fichiers pour la fabrication et l'impression."
+      ],
+      "deliv": "Cahier d'identité visuelle et supports validés pour production."
+     }
+    ],
+    "expect": "Le choix du designer et de l'agence (je peux vous en proposer), vos préférences de style, et la validation des propositions à chaque étape. Les prestations de design et de fabrication sont facturées à part par les prestataires."
+   },
+   {
+    "num": "3",
+    "title": "Menu, layout et équipements",
+    "intro": "Ce sont les produits qui déterminent les espaces et les machines, pas l'inverse. On définit d'abord ce que vous allez vendre et comment le fabriquer, on dessine ensuite le layout de production, puis on choisit les équipements qui y entrent.",
+    "blocks": [
+     {
+      "label": "PARTIE A",
+      "title": "Menu et produits",
+      "items": [
+       "Définition de la gamme de lancement.",
+       "Sélection des formats, garnitures et finitions.",
+       "Élaboration des recettes de référence.",
+       "Développement des fiches techniques produits.",
+       "Définition des grammages et rendements théoriques.",
+       "Étude des méthodes de fabrication.",
+       "Préparation du programme d'essais et de validation produit."
+      ],
+      "deliv": "Menu de lancement et dossier technique produits."
+     },
+     {
+      "label": "PARTIE B",
+      "title": "Conception et layout",
+      "items": [
+       "Dimensionnement des espaces à partir du menu et des volumes attendus.",
+       "Conception du layout fonctionnel : réception, préparation, production, cuisson, vente et service.",
+       "Dimensionnement des stockages : sec, froid positif et froid négatif.",
+       "Définition des circulations et des flux.",
+       "Comparaison de plusieurs variantes de layout, puis validation avec vous.",
+       "Remise du plan fonctionnel au designer et au contractor."
+      ],
+      "deliv": "Plan fonctionnel du layout validé et dimensionnement des stockages."
+     },
+     {
+      "label": "PARTIE C",
+      "title": "Équipements et implantation",
+      "items": [
+       "Analyse des équipements nécessaires selon le menu et les process.",
+       "Définition des caractéristiques techniques et dimensions.",
+       "Étude des besoins en pétrissage, fermentation, cuisson, froid et stockage.",
+       "Élaboration du plan d'implantation technique.",
+       "Coordination des besoins en eau, électricité, ventilation et évacuation.",
+       "Finalisation de la liste des équipements.",
+       "Consultation des fournisseurs et comparaison des offres."
+      ],
+      "deliv": "Plan d'implantation et liste d'équipements prête à consultation."
+     }
+    ],
+    "expect": "Votre validation du menu avant le layout, puis du layout avant les équipements, et vos contraintes de budget. Les plans remis sont des plans fonctionnels, pas des plans d'exécution. L'achat des équipements reste à votre charge."
+   },
+   {
+    "num": "4",
+    "title": "Conception et coordination des travaux",
+    "intro": "Le chantier est l'étape où les délais et les budgets dérapent le plus facilement. Je traduis vos besoins d'exploitation en consignes claires pour les intervenants, je compare les devis et je suis l'avancement avec vous, jusqu'à la réception des espaces.",
+    "blocks": [
+     {
+      "label": "CE QUE JE FAIS",
+      "title": null,
+      "items": [
+       "Définition des besoins d'aménagement.",
+       "Coordination avec le designer et les intervenants techniques.",
+       "Mise en relation avec un ou plusieurs contractors.",
+       "Analyse et comparaison des devis.",
+       "Ajustement des plans selon les besoins opérationnels.",
+       "Suivi de l'avancement des travaux et coordination des échanges.",
+       "Identification des points bloquants et suivi des corrections.",
+       "Préparation de la réception des espaces."
+      ],
+      "deliv": "Dossier d'aménagement, tableau de suivi des travaux et points de contrôle."
+     }
+    ],
+    "expect": "Le choix du contractor et la validation des devis. Les travaux contractent directement avec vous. La maîtrise d'œuvre réglementée et les autorisations officielles restent confiées aux professionnels et aux autorités compétents."
+   },
+   {
+    "num": "5",
+    "title": "Budget, CAPEX et plan de rentabilité",
+    "intro": "Une fois les travaux et les équipements chiffrés, on assemble le budget global : combien investir, combien coûte l'exploitation, et à partir de quand l'activité couvre ses charges. C'est la base pour décider en connaissance de cause.",
+    "blocks": [
+     {
+      "label": "CE QUE JE FAIS",
+      "title": null,
+      "items": [
+       "Construction du budget global d'investissement.",
+       "Estimation du CAPEX équipements et aménagements.",
+       "Identification des dépenses préouverture.",
+       "Estimation des charges d'exploitation.",
+       "Construction du food cost et des prix de vente.",
+       "Définition des hypothèses de chiffre d'affaires.",
+       "Élaboration de scénarios de rentabilité.",
+       "Calcul du seuil de rentabilité et analyse des risques financiers."
+      ],
+      "deliv": "Budget prévisionnel, modèle économique et plan de rentabilité."
+     }
+    ],
+    "expect": "Les devis reçus, vos hypothèses de loyer et de charges fixes, et votre budget disponible. Les scénarios sont des estimations construites sur ces données : aucun résultat financier n'est garanti."
+   },
+   {
+    "num": "6",
+    "title": "Fournisseurs, production et SOP",
+    "intro": "On achète selon ce qu'on produit, et on écrit comment on le produit. Je sélectionne les fournisseurs adaptés à votre menu, j'organise la production, puis je rédige les procédures (SOP) que votre équipe appliquera chaque jour.",
+    "blocks": [
+     {
+      "label": "PARTIE A",
+      "title": "Recherche et sélection des fournisseurs",
+      "items": [
+       "Identification des matières premières et fournitures nécessaires.",
+       "Recherche de fournisseurs locaux et internationaux.",
+       "Demande d'échantillons et tests de qualité.",
+       "Comparaison des prix, délais et conditions de livraison.",
+       "Négociation des conditions d'achat.",
+       "Sélection des fournisseurs de packaging et de consommables."
+      ],
+      "deliv": "Panel de fournisseurs validés et tableau comparatif d'achats."
+     },
+     {
+      "label": "PARTIE B",
+      "title": "Capacités de production et organisation",
+      "items": [
+       "Étude des capacités théoriques des équipements retenus.",
+       "Définition des volumes de production envisageables.",
+       "Analyse des cycles de fabrication.",
+       "Organisation des postes de travail.",
+       "Dimensionnement des effectifs.",
+       "Définition des horaires et du planning de production.",
+       "Organisation de la réception, du stockage et des approvisionnements."
+      ],
+      "deliv": "Plan de production et organisation des équipes."
+     },
+     {
+      "label": "PARTIE C",
+      "title": "Procédures opérationnelles (SOP)",
+      "items": [
+       "Réception et contrôle des marchandises.",
+       "Stockage et rotation des stocks.",
+       "Préparation et production, étape par étape.",
+       "Nettoyage, désinfection et hygiène du personnel.",
+       "Sécurité alimentaire.",
+       "Gestion des pertes et du gaspillage.",
+       "Mise en forme du manuel de procédures."
+      ],
+      "deliv": "Manuel de procédures opérationnelles (SOP), prêt à former l'équipe."
+     }
+    ],
+    "expect": "Votre accord sur les fournisseurs retenus et sur les volumes visés à l'ouverture. Les commandes et contrats d'achat sont passés par vous, directement avec les fournisseurs. Toute certification officielle d'hygiène reste confiée aux organismes compétents."
+   },
+   {
+    "num": "7",
+    "title": "Équipe et ouverture",
+    "intro": "Une ouverture réussie tient à l'équipe. On recrute et on forme avant l'ouverture, on répète en conditions réelles, puis je reste à vos côtés pendant les premiers jours d'exploitation pour corriger ce qui doit l'être.",
+    "blocks": [
+     {
+      "label": "PARTIE A",
+      "title": "Recrutement, formation et préparation",
+      "items": [
+       "Définition de l'organigramme et des postes nécessaires.",
+       "Accompagnement au recrutement et à la sélection des profils.",
+       "Préparation des supports de formation.",
+       "Formation pratique des équipes de production.",
+       "Formation aux standards de qualité, d'hygiène et d'organisation.",
+       "Réalisation des essais de fabrication et ajustements.",
+       "Vérification des équipements et du fonctionnement des postes.",
+       "Mise en place des checklists d'ouverture et de fermeture.",
+       "Organisation des simulations de service."
+      ],
+      "deliv": "Équipe préparée, produits testés et procédures prêtes pour l'exploitation."
+     },
+     {
+      "label": "PARTIE B",
+      "title": "Préouverture, lancement et accompagnement",
+      "items": [
+       "Vérification de la préparation générale du site.",
+       "Contrôle des derniers points techniques et opérationnels.",
+       "Coordination du calendrier de préouverture.",
+       "Accompagnement des premières productions.",
+       "Ajustement des quantités et des méthodes de travail.",
+       "Suivi des premières journées d'exploitation.",
+       "Identification et correction des dysfonctionnements.",
+       "Transmission des recommandations finales."
+      ],
+      "deliv": "Rapport de lancement et plan d'actions postouverture."
+     }
+    ],
+    "expect": "La décision finale sur les recrutements, la mise à disposition de l'équipe pour la formation, et une date d'ouverture cible. Les démarches administratives liées à l'emploi et à l'ouverture restent à votre charge."
+   }
+  ]
+ },
+ "en": {
+  "about": {
+   "label": "ABOUT US",
+   "title": "A strategic and operational consulting firm, specialised in Food & Beverage.",
+   "title1": "A strategic and operational consulting firm,",
+   "title2": "specialised in Food & Beverage.",
+   "p": "NAYISSORIA ADVISORY supports project owners who want to create, optimise or grow a bakery, pastry, café or restaurant business, with a hands-on approach: from concept to opening, then into operations.",
+   "cards": [
+    [
+     "Create",
+     "Structure an idea, validate the site, design the business and prepare the opening."
+    ],
+    [
+     "Optimise",
+     "Improve the production, organisation, costs and quality of an existing business."
+    ],
+    [
+     "Grow",
+     "Open new points of sale, structure growth and train teams."
+    ]
+   ],
+   "wlabel": "HOW WE WORK",
+   "work": [
+    [
+     "Global steering.",
+     "A single point of contact to coordinate design, works, equipment, products and teams."
+    ],
+    [
+     "The field before theory.",
+     "Twenty years of experience in bakery and pastry, in France and internationally, notably in Uruguay and Saudi Arabia."
+    ],
+    [
+     "The right people in the right places.",
+     "A network of designers, contractors, suppliers, chefs and specialists, mobilised according to the project's needs."
+    ],
+    [
+     "Precise deliverables.",
+     "Every stage ends with a document or a concrete result, validated with you."
+    ]
+   ]
+  },
+  "errors": {
+   "label": "WHY GET SUPPORT",
+   "t1": "The five mistakes",
+   "t2": "that cost the most.",
+   "p": "When opening a bakery or café, most bad surprises come from decisions made too early, in the wrong order. The phased journey exists to avoid them.",
+   "items": [
+    [
+     "Choosing the premises before analysing them",
+     "Surfaces, partitions, access, water, electricity and extraction networks: everything must be checked before the plan is fixed."
+    ],
+    [
+     "Buying equipment before the menu is fixed",
+     "Products and processes determine the machines, not the other way round."
+    ],
+    [
+     "Building a budget with no safety margin",
+     "Equipment, fit-out, start-up: the real budget almost always exceeds the first estimate."
+    ],
+    [
+     "Depending on a single supplier",
+     "Without compared quotes or a second option, lead times and prices slip out of the client's hands."
+    ],
+    [
+     "Neglecting the team and training",
+     "A team hired late and trained in a hurry shows from the very first days of opening."
+    ]
+   ]
+  },
+  "obj": {
+   "label": "MISSION OBJECTIVE",
+   "t1": "Turn an initial project into a business that is",
+   "t2": "structured, equipped, organised",
+   "t3": "and ready to operate.",
+   "p": "NAYISSORIA ADVISORY acts as a partner for steering, design and operational execution, in coordination with the project owner and specialist providers.",
+   "plabel": "THE JOURNEY IN 7 PHASES",
+   "phases": [
+    [
+     "Scoping and premises feasibility",
+     "Set up the project, check what the premises allow."
+    ],
+    [
+     "Design and visual identity",
+     "Give the venue and the brand one shared identity."
+    ],
+    [
+     "Menu, layout and equipment",
+     "Define what you sell, draw the space, then choose the machines."
+    ],
+    [
+     "Works design and coordination",
+     "Steer the construction site through to handover."
+    ],
+    [
+     "Budget, CAPEX and profitability plan",
+     "Know how much to invest and when the business covers its costs."
+    ],
+    [
+     "Suppliers, production and SOPs",
+     "Secure purchasing, organise production, write the procedures."
+    ],
+    [
+     "Team and opening",
+     "Recruit, train, open, then fix the first days."
+    ]
+   ]
+  },
+  "vision": {
+   "label": "YOUR VISION",
+   "t1": "A shopfront that makes people want it,",
+   "t2": "designed for takeaway.",
+   "cap": "MOOD ILLUSTRATION, NON-CONTRACTUAL",
+   "lead": "Here is how the front of your unit, 3.8 m wide in front of the central kitchen, could look: a shopfront closed to the production area, with no dining room, and a pick-up hatch for couriers and customers.",
+   "items": [
+    [
+     "THE NAME",
+     "DOAN, with “Khaliat Al Nahl” (خلية النحل), the honeycomb in Arabic."
+    ],
+    [
+     "THE LOGO",
+     "Three honeycomb hexagons, one in honey amber, backlit as night falls."
+    ],
+    [
+     "THE FACADE",
+     "Light stone, honeycomb pattern, continuous plinth and a window onto the bakery: the craft is visible, the kitchen stays closed."
+    ],
+    [
+     "THE PICK-UP",
+     "PICK-UP sign, brass plaque and stone counter: you collect your order without going in."
+    ]
+   ],
+   "meas": [
+    [
+     "3.8 m",
+     "facade width"
+    ],
+    [
+     "≈ 80 cm",
+     "depth of the recess (proposal)"
+    ],
+    [
+     "0",
+     "dining room, no access to the kitchen"
+    ],
+    [
+     "100 %",
+     "takeaway and delivery"
+    ]
+   ],
+   "note": "The design, materials and name are a starting proposal, to be refined in phase 2. Dimensions are indicative and to be validated in phases 1 and 2."
+  },
+  "scope": {
+   "label": "SCOPE",
+   "t1": "What the fees",
+   "t2": "cover.",
+   "inc_l": "INCLUDED",
+   "inc": [
+    "Strategic and operational advice.",
+    "Structuring and steering of the project.",
+    "Coordination of stakeholders: designer, contractors, suppliers.",
+    "Writing of documents: technical sheets, specifications, procedures, files.",
+    "Hands-on training of production teams, according to the phases selected."
+   ],
+   "exc_l": "NOT INCLUDED",
+   "exc": [
+    "Works and contractors.",
+    "Equipment and small tools.",
+    "External design and visual identity services.",
+    "Administrative costs, taxes, licences and permits, borne by the client.",
+    "Execution drawings, technical engineering and regulated project supervision.",
+    "Third-party fees: lawyer, accountant, hygiene consultant.",
+    "Insurance.",
+    "Travel outside Riyadh."
+   ],
+   "cm_l": "MY COMMITMENTS",
+   "cm": [
+    [
+     "2 revisions",
+     "Each major deliverable includes two rounds of changes, based on your feedback."
+    ],
+    [
+     "Reply within 48 h",
+     "For urgent questions, 48 working hours maximum. Within 5 working days for the others."
+    ],
+    [
+     "30 days of support",
+     "After delivery of each major deliverable, for clarifications and minor adjustments."
+    ]
+   ]
+  },
+  "terms": {
+   "label": "TERMS",
+   "t1": "A clear framework",
+   "t2": "to move forward with confidence.",
+   "items": [
+    [
+     "Indivisible phases",
+     "Each phase is invoiced in full. If only some parts of a phase are selected, the price of the phase remains unchanged."
+    ],
+    [
+     "Payment",
+     "Full journey: 40% at signature, 30% at the end of the works (phase 4), 30% before opening (start of phase 7). Individual phases: 100% at the start of each phase."
+    ],
+    [
+     "Project changes",
+     "Any significant change of scope (change of concept, markedly larger surface, added services) is covered by an amendment specifying the nature of the change and its impact on lead times and fees."
+    ],
+    [
+     "Budget overrun",
+     "If the actual CAPEX exceeds the validated estimate by more than 20%, a recalibration meeting is held to adjust the project or its scope."
+    ],
+    [
+     "External lead times",
+     "Lead times for permits, deliveries, works and third-party providers do not depend on NAYISSORIA ADVISORY and do not give rise to penalties."
+    ],
+    [
+     "Suspension",
+     "The support may be suspended without penalty in case of a blockage beyond the parties' control, inability to access the site, or the client's decision to suspend the project. Only the phases completed and validated remain due."
+    ],
+    [
+     "Early termination",
+     "Individual phases: termination possible at the end of each validated phase, without penalty. Full journey: if stopped before the end, the network price is cancelled and the phases completed are invoiced at the catalogue price. Deliverables of paid phases remain the client's property."
+    ],
+    [
+     "Confidentiality and validity",
+     "The information exchanged is strictly confidential. This offer is valid for 30 days from its date of issue."
+    ]
+   ]
+  },
+  "mission": {
+   "label": "BUILD YOUR MISSION",
+   "t1": "Tick the phases you are interested in,",
+   "t2": "I will prepare your tailored quote.",
+   "note": "Fees in Saudi riyals (SAR), all taxes included, at catalogue price.",
+   "rows": [
+    [
+     "Scoping and premises feasibility",
+     9000
+    ],
+    [
+     "Design and visual identity",
+     4000
+    ],
+    [
+     "Menu, layout and equipment",
+     16000
+    ],
+    [
+     "Works design and coordination",
+     10000
+    ],
+    [
+     "Budget, CAPEX and profitability plan",
+     6000
+    ],
+    [
+     "Suppliers, production and SOPs",
+     10000
+    ],
+    [
+     "Team and opening",
+     18000
+    ]
+   ],
+   "cat": "CATALOGUE TOTAL · 7 PHASES",
+   "net_l": "FULL JOURNEY · NETWORK PRICE −25%",
+   "net_t": "The 7 phases, from design to opening",
+   "net_n": "Indivisible price, offer valid until 9 December 2026.",
+   "cta": "Tell me which phases interest you: I will prepare a tailored quote for you, with a schedule suited to your opening."
+  },
+  "phases": [
+   {
+    "num": "1",
+    "title": "Scoping and premises feasibility",
+    "intro": "We start from what you have already sent me (documents, plans, questionnaire) to set a clear framework: what you want to open, for whom, with which priorities. Then we check what the premises really allow, before any design decision.",
+    "blocks": [
+     {
+      "label": "PART A",
+      "title": "Project scoping and analysis",
+      "items": [
+       "Presentation and structuring of the project.",
+       "Analysis of the documents and information provided.",
+       "Definition of the concept and its positioning.",
+       "Identification of operational needs.",
+       "Definition of objectives, constraints and priorities.",
+       "Drafting of a general roadmap."
+      ],
+      "deliv": "Scoping file and project master plan."
+     },
+     {
+      "label": "PART B",
+      "title": "Premises analysis and spatial feasibility",
+      "items": [
+       "Reading and analysis of existing plans.",
+       "Checking of dimensions and surfaces.",
+       "Identification of partitions that could be removed, subject to technical verification.",
+       "Analysis of access, stairs, circulation and utilities.",
+       "Study of the different surface configurations.",
+       "Production of a functional pre-layout (the detailed layout is designed in phase 3).",
+       "Identification of technical and regulatory constraints, notably for any staff accommodation."
+      ],
+      "deliv": "Surface study and zoning proposal."
+     }
+    ],
+    "expect": "Dimensioned plans of the premises and photos, the completed scoping questionnaire, and site access for a visit in Riyadh. Regulated technical checks remain the responsibility of the competent professionals."
+   },
+   {
+    "num": "2",
+    "title": "Design and visual identity",
+    "intro": "The venue and the brand must tell the same story. I link your concept, the interior designer and the visual identity agency, so that what is drawn is also what works day to day.",
+    "blocks": [
+     {
+      "label": "WHAT I DO",
+      "title": null,
+      "items": [
+       "Definition of the brand universe and the atmosphere of the venue.",
+       "Coordination with the interior designer and the visual identity agency.",
+       "Creation or adaptation of the name, logo and brand guidelines.",
+       "Design of materials: menus, packaging, signage, uniforms.",
+       "Checking consistency between the concept, the spaces and the brand image.",
+       "Preparation of files for manufacturing and printing."
+      ],
+      "deliv": "Visual identity book and materials validated for production."
+     }
+    ],
+    "expect": "The choice of designer and agency (I can suggest some), your style preferences, and your validation of the proposals at each step. Design and manufacturing services are invoiced separately by the providers."
+   },
+   {
+    "num": "3",
+    "title": "Menu, layout and equipment",
+    "intro": "Products determine the spaces and the machines, not the other way round. We first define what you will sell and how to make it, then draw the production layout, then choose the equipment that goes into it.",
+    "blocks": [
+     {
+      "label": "PART A",
+      "title": "Menu and products",
+      "items": [
+       "Definition of the launch range.",
+       "Selection of formats, fillings and finishes.",
+       "Development of reference recipes.",
+       "Development of product technical sheets.",
+       "Definition of weights and theoretical yields.",
+       "Study of manufacturing methods.",
+       "Preparation of the product testing and validation programme."
+      ],
+      "deliv": "Launch menu and technical product file."
+     },
+     {
+      "label": "PART B",
+      "title": "Design and layout",
+      "items": [
+       "Sizing of spaces based on the menu and expected volumes.",
+       "Design of the functional layout: receiving, preparation, production, baking, sales and service.",
+       "Sizing of storage: dry, chilled and frozen.",
+       "Definition of circulation and flows.",
+       "Comparison of several layout variants, then validation with you.",
+       "Handover of the functional plan to the designer and contractor."
+      ],
+      "deliv": "Validated functional layout plan and storage sizing."
+     },
+     {
+      "label": "PART C",
+      "title": "Equipment and installation",
+      "items": [
+       "Analysis of the equipment needed according to the menu and processes.",
+       "Definition of technical specifications and dimensions.",
+       "Study of needs for mixing, proofing, baking, refrigeration and storage.",
+       "Preparation of the technical installation plan.",
+       "Coordination of water, electricity, ventilation and drainage needs.",
+       "Finalisation of the equipment list.",
+       "Supplier consultation and comparison of offers."
+      ],
+      "deliv": "Installation plan and equipment list ready for consultation."
+     }
+    ],
+    "expect": "Your validation of the menu before the layout, then of the layout before the equipment, and your budget constraints. The plans provided are functional plans, not execution drawings. Equipment purchase remains at your expense."
+   },
+   {
+    "num": "4",
+    "title": "Works design and coordination",
+    "intro": "The construction site is where lead times and budgets slip most easily. I translate your operating needs into clear instructions for the contractors, compare quotes and follow progress with you, through to handover of the spaces.",
+    "blocks": [
+     {
+      "label": "WHAT I DO",
+      "title": null,
+      "items": [
+       "Definition of fit-out needs.",
+       "Coordination with the designer and technical contractors.",
+       "Introduction to one or more contractors.",
+       "Analysis and comparison of quotes.",
+       "Adjustment of plans according to operational needs.",
+       "Monitoring of works progress and coordination of exchanges.",
+       "Identification of blocking points and follow-up of corrections.",
+       "Preparation for handover of the spaces."
+      ],
+      "deliv": "Fit-out file, works tracking table and checkpoints."
+     }
+    ],
+    "expect": "The choice of contractor and the validation of quotes. Works are contracted directly with you. Regulated project supervision and official authorisations remain with the competent professionals and authorities."
+   },
+   {
+    "num": "5",
+    "title": "Budget, CAPEX and profitability plan",
+    "intro": "Once works and equipment are costed, we assemble the overall budget: how much to invest, what operations cost, and when the business covers its costs. It is the basis for deciding with full knowledge.",
+    "blocks": [
+     {
+      "label": "WHAT I DO",
+      "title": null,
+      "items": [
+       "Construction of the overall investment budget.",
+       "Estimate of equipment and fit-out CAPEX.",
+       "Identification of pre-opening expenses.",
+       "Estimate of operating costs.",
+       "Construction of food cost and selling prices.",
+       "Definition of revenue assumptions.",
+       "Development of profitability scenarios.",
+       "Calculation of the break-even point and analysis of financial risks."
+      ],
+      "deliv": "Forecast budget, business model and profitability plan."
+     }
+    ],
+    "expect": "The quotes received, your rent and fixed-cost assumptions, and your available budget. The scenarios are estimates built on this data: no financial result is guaranteed."
+   },
+   {
+    "num": "6",
+    "title": "Suppliers, production and SOPs",
+    "intro": "We buy according to what we produce, and we write down how we produce it. I select the suppliers suited to your menu, organise production, then write the procedures (SOPs) your team will apply every day.",
+    "blocks": [
+     {
+      "label": "PART A",
+      "title": "Supplier search and selection",
+      "items": [
+       "Identification of the raw materials and supplies needed.",
+       "Search for local and international suppliers.",
+       "Request for samples and quality tests.",
+       "Comparison of prices, lead times and delivery terms.",
+       "Negotiation of purchasing terms.",
+       "Selection of packaging and consumables suppliers."
+      ],
+      "deliv": "Panel of validated suppliers and purchasing comparison table."
+     },
+     {
+      "label": "PART B",
+      "title": "Production capacity and organisation",
+      "items": [
+       "Study of the theoretical capacity of the selected equipment.",
+       "Definition of feasible production volumes.",
+       "Analysis of production cycles.",
+       "Organisation of workstations.",
+       "Sizing of staffing.",
+       "Definition of working hours and production schedule.",
+       "Organisation of receiving, storage and supply."
+      ],
+      "deliv": "Production plan and team organisation."
+     },
+     {
+      "label": "PART C",
+      "title": "Standard operating procedures (SOPs)",
+      "items": [
+       "Goods receiving and inspection.",
+       "Storage and stock rotation.",
+       "Preparation and production, step by step.",
+       "Cleaning, disinfection and staff hygiene.",
+       "Food safety.",
+       "Waste and loss management.",
+       "Formatting of the procedures manual."
+      ],
+      "deliv": "Standard operating procedures (SOP) manual, ready to train the team."
+     }
+    ],
+    "expect": "Your agreement on the selected suppliers and on the volumes targeted at opening. Orders and purchase contracts are placed by you, directly with the suppliers. Any official hygiene certification remains with the competent bodies."
+   },
+   {
+    "num": "7",
+    "title": "Team and opening",
+    "intro": "A successful opening comes down to the team. We recruit and train before opening, rehearse in real conditions, then I stay by your side during the first days of operation to correct what needs correcting.",
+    "blocks": [
+     {
+      "label": "PART A",
+      "title": "Recruitment, training and preparation",
+      "items": [
+       "Definition of the organisation chart and the positions needed.",
+       "Support for recruitment and selection of profiles.",
+       "Preparation of training materials.",
+       "Hands-on training of production teams.",
+       "Training in quality, hygiene and organisation standards.",
+       "Production trials and adjustments.",
+       "Checking of equipment and workstation operation.",
+       "Setting up opening and closing checklists.",
+       "Organisation of service simulations."
+      ],
+      "deliv": "Team prepared, products tested and procedures ready for operation."
+     },
+     {
+      "label": "PART B",
+      "title": "Pre-opening, launch and support",
+      "items": [
+       "Checking of the overall readiness of the site.",
+       "Control of the last technical and operational points.",
+       "Coordination of the pre-opening schedule.",
+       "Support for the first productions.",
+       "Adjustment of quantities and working methods.",
+       "Monitoring of the first days of operation.",
+       "Identification and correction of malfunctions.",
+       "Handover of final recommendations."
+      ],
+      "deliv": "Launch report and post-opening action plan."
+     }
+    ],
+    "expect": "The final decision on hiring, making the team available for training, and a target opening date. Administrative procedures related to employment and opening remain at your expense."
+   }
+  ]
+ }
+};
+const UI={
+ fr:{menu:[['accueil','Accueil'],['apropos','À propos'],['vision','Votre vision'],['phases','Les 7 phases'],['perimetre','Périmètre'],['conditions','Conditions'],['mission','Ma mission']],
+  cta:'Composez votre mission',hl:"PROPOSITION D'ACCOMPAGNEMENT",ht:'Accompagnement <em>360°</em>',hs:'De la conception du projet à son ouverture opérationnelle.',b1:'Découvrir votre vision',pl:'PROJET',loc:'LIEU',by:'PRÉSENTÉ PAR',scroll:'Défiler',
+  gal:['Le motif en relief','Le point de retrait',"L'avenue, le soir"],galalt:['Détail du mur en nid d\'abeille','Détail du point de retrait','Vue de l\'avenue, le soir'],
+  phasesTitle:['Les sept phases,','une à une.'],ph:'LES PHASES',inc:'Ce que comprennent les honoraires.',
+  sel:'VOTRE SÉLECTION',tot0:'Aucune phase sélectionnée',wa:'Envoyer ma sélection sur WhatsApp',all:'Tout sélectionner',none:'Tout désélectionner',
+  netbadge:'PRIX RÉSEAU −25 %',hintAll:'Parcours complet, de la conception à l\'ouverture. Prix non divisible, offre valable jusqu\'au 9 décembre 2026.',
+  hintSome:'Tarif catalogue, toutes taxes comprises. Le prix réseau −25 % s\'applique au parcours complet (7 phases).',phases:'phase(s)',
+  ill:"Illustration d'ambiance, non contractuelle.",close:'Fermer',
+  wam:(sel,total,net)=>`Bonjour Abdelhafid, je suis intéressé par la proposition DOAN · Khaliat Al Nahl.\nPhases choisies : ${sel||'—'}\n${net?'Parcours complet (prix réseau −25 %)':'Tarif catalogue'} : ${total} SAR TTC.`},
+ en:{menu:[['accueil','Home'],['apropos','About us'],['vision','Your vision'],['phases','The 7 phases'],['perimetre','Scope'],['conditions','Terms'],['mission','Your mission']],
+  cta:'Build your mission',hl:'SUPPORT PROPOSAL',ht:'Support <em>360°</em>',hs:'From project design to operational opening.',b1:'Discover your vision',pl:'PROJECT',loc:'LOCATION',by:'PRESENTED BY',scroll:'Scroll',
+  gal:['The relief pattern','The pick-up point','The avenue at night'],galalt:['Detail of the honeycomb wall','Detail of the pick-up point','View of the avenue at night'],
+  phasesTitle:['The seven phases,','one by one.'],ph:'THE PHASES',inc:'',
+  sel:'YOUR SELECTION',tot0:'No phase selected',wa:'Send my selection on WhatsApp',all:'Select all',none:'Clear all',
+  netbadge:'NETWORK PRICE −25%',hintAll:'Full journey, from design to opening. Indivisible price, offer valid until 9 December 2026.',
+  hintSome:'Catalogue price, all taxes included. The −25% network price applies to the full journey (7 phases).',phases:'phase(s)',
+  ill:'Mood illustration, non-contractual.',close:'Close',
+  wam:(sel,total,net)=>`Hello Abdelhafid, I am interested in the DOAN · Khaliat Al Nahl proposal.\nSelected phases: ${sel||'—'}\n${net?'Full journey (network price −25%)':'Catalogue price'}: ${total} SAR incl. taxes.`}
+};
+const $=id=>document.getElementById(id);
+let lang=(localStorage.getItem('doan-lang')||('fr'));
+let cur=0; const sel=new Set();
+const fmt=n=>n.toLocaleString('fr-FR').replace(/ | /g,' ');
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function render(){
+  const d=DATA[lang],u=UI[lang]; document.documentElement.lang=lang;
+  document.title=lang==='fr'?"DOAN · Khaliat Al Nahl — Proposition d'accompagnement":'DOAN · Khaliat Al Nahl — Support proposal';
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+  $('menu').innerHTML=u.menu.map(m=>`<li><a href="#${m[0]}" data-s="${m[0]}">${m[1]}</a></li>`).join('');
+  $('navcta').textContent=u.cta;
+  $('h-label').textContent=u.hl;$('h-title').innerHTML=u.ht;$('h-sub').textContent=u.hs;$('h-b1').textContent=u.b1;$('h-b2').textContent=u.cta;
+  $('h-pl').textContent=u.pl;$('h-loc').textContent=u.loc;$('h-by').textContent=u.by;$('h-scroll').textContent=u.scroll;
+  const a=d.about;$('a-label').textContent=a.label;$('a-title').innerHTML=`${esc(a.title1)} <em>${esc(a.title2)}</em>`;$('a-p').textContent=a.p;
+  $('a-cards').innerHTML=a.cards.map(c=>`<div class="card"><h3>${esc(c[0])}</h3><p>${esc(c[1])}</p></div>`).join('');
+  $('a-wl').textContent=a.wlabel;
+  $('a-work').innerHTML=a.work.map((w,i)=>`<div class="work-item"><span class="n">${i+1}</span><div><b>${esc(w[0])}</b>${esc(w[1])}</div></div>`).join('');
+  const e=d.errors;$('e-label').textContent=e.label;$('e-title').innerHTML=`${esc(e.t1)} <em>${esc(e.t2)}</em>`;$('e-p').textContent=e.p;
+  $('e-list').innerHTML=e.items.map((x,i)=>`<div class="err"><span class="n">${i+1}</span><h3>${esc(x[0])}</h3><p>${esc(x[1])}</p></div>`).join('');
+  const o=d.obj;$('o-label').textContent=o.label;$('o-title').innerHTML=`${esc(o.t1)} <em>${esc(o.t2)}</em> ${esc(o.t3)}`;$('o-p').textContent=o.p;$('o-pl').textContent=o.plabel;
+  $('o-list').innerHTML=o.phases.map((p,i)=>`<div class="obj-row" data-go="${i}"><span class="n">${i+1}</span><div><b>${esc(p[0])}</b><span>${esc(p[1])}</span></div></div>`).join('');
+  const v=d.vision;$('v-label').textContent=v.label;$('v-title').innerHTML=`${esc(v.t1)} <em>${esc(v.t2)}</em>`;$('v-lead').textContent=v.lead;$('v-cap').textContent=u.ill.toUpperCase();
+  $('v-items').innerHTML=v.items.map(x=>`<div class="vis-item"><span class="label">${esc(x[0])}</span><p>${esc(x[1])}</p></div>`).join('');
+  $('v-meas').innerHTML=v.meas.map(x=>`<div><b>${esc(x[0])}</b><small>${esc(x[1])}</small></div>`).join('');
+  $('v-note').textContent=v.note;
+  const gi=['detail-wall','detail-pickup','detail-avenue'];
+  $('v-gal').innerHTML=gi.map((g,i)=>`<button data-img="assets/${g}.jpg" data-alt="${esc(u.galalt[i])}"><img src="assets/${g}.jpg" alt="${esc(u.galalt[i])}" ><span>${esc(u.gal[i])}</span></button>`).join('');
+  $('p-label').textContent=u.ph;$('p-title').innerHTML=`${esc(u.phasesTitle[0])} <em>${esc(u.phasesTitle[1])}</em>`;
+  $('ph-tabs').innerHTML=d.phases.map((p,i)=>`<button class="ph-tab${i===cur?' on':''}" role="tab" data-i="${i}"><span class="n">${p.num}</span><span>${esc(p.title)}</span></button>`).join('');
+  phase();
+  const s=d.scope;$('s-label').textContent=s.label;$('s-title').innerHTML=`${esc(s.t1)} <em>${esc(s.t2)}</em>`;
+  $('s-inc-l').textContent=s.inc_l;$('s-exc-l').textContent=s.exc_l;
+  $('s-inc').innerHTML=s.inc.map(x=>`<li>${esc(x)}</li>`).join('');$('s-exc').innerHTML=s.exc.map(x=>`<li>${esc(x)}</li>`).join('');
+  $('s-cm-l').textContent=s.cm_l;$('s-cm').innerHTML=s.cm.map(c=>`<div><b>${esc(c[0])}</b><p>${esc(c[1])}</p></div>`).join('');
+  const t=d.terms;$('t-label').textContent=t.label;$('t-title').innerHTML=`${esc(t.t1)} <em>${esc(t.t2)}</em>`;
+  $('t-acc').innerHTML=t.items.map((x,i)=>`<div class="acc-item${i===0?' open':''}"><button class="acc-q" aria-expanded="${i===0}">${esc(x[0])}<i></i></button><div class="acc-a"><div><p>${esc(x[1])}</p></div></div></div>`).join('');
+  const m=d.mission;$('m-label').textContent=m.label;$('m-title').innerHTML=`${esc(m.t1)} <em>${esc(m.t2)}</em>`;$('m-note').textContent=m.note;$('m-sel').textContent=u.sel;
+  $('m-rows').innerHTML=m.rows.map((r,i)=>`<div class="m-row${sel.has(i)?' sel':''}" role="checkbox" tabindex="0" aria-checked="${sel.has(i)}" data-i="${i}"><span class="n">${i+1}</span><span class="t">${esc(r[0])}</span><span class="p">${fmt(r[1])}<small>SAR</small></span><span class="chk"><svg viewBox="0 0 14 14"><path d="M2 7.5l3.2 3.2L12 3.6"/></svg></span></div>`).join('');
+  $('f-ill').textContent=u.ill;$('lb-x').setAttribute('aria-label',u.close);
+  calc();
+}
+function phase(){
+  const p=DATA[lang].phases[cur];
+  const n=p.blocks.length;
+  const bl=p.blocks.map(b=>`<div class="blk"><span class="label">${esc(b.label)}</span>${b.title?`<h4>${esc(b.title)}</h4>`:''}<ul>${b.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul><div class="deliv"><small>${lang==='fr'?'LIVRABLE':'DELIVERABLE'}</small>${esc(b.deliv)}</div></div>`).join('');
+  $('ph-panel').innerHTML=`<div class="ph-head"><span class="big">${p.num}</span><h3>${esc(p.title)}</h3></div><p class="ph-intro">${esc(p.intro)}</p><div class="blocks c${Math.min(n,3)}">${bl}</div><div class="expect"><span class="label">${lang==='fr'?"CE QUE J'ATTENDS DE VOUS":'WHAT I NEED FROM YOU'}</span><p>${esc(p.expect)}</p></div>`;
+  $('ph-panel').style.animation='none';void $('ph-panel').offsetWidth;$('ph-panel').style.animation='';
+  document.querySelectorAll('.ph-tab').forEach((t,i)=>{t.classList.toggle('on',i===cur);t.setAttribute('aria-selected',i===cur)});
+}
+function calc(){
+  const m=DATA[lang].mission,u=UI[lang];
+  const all=sel.size===7; let tot=0;m.rows.forEach((r,i)=>{if(sel.has(i))tot+=r[1]});
+  const shown=all?Math.round(tot*0.75):tot;
+  $('m-total').textContent=fmt(shown);
+  $('m-strike').textContent=all?fmt(tot)+' SAR':(sel.size?'':u.tot0);
+  $('m-badge').hidden=!all;$('m-badge').textContent=u.netbadge;
+  $('m-hint').textContent=all?u.hintAll:u.hintSome;
+  const names=[...sel].sort((a,b)=>a-b).map(i=>i+1).join(', ');
+  $('m-wa').textContent=u.wa;
+  $('m-wa').href='https://wa.me/966507881567?text='+encodeURIComponent(u.wam(names,fmt(shown),all));
+  $('m-all').textContent=all?u.none:u.all;
+  document.querySelectorAll('.m-row').forEach((r,i)=>{r.classList.toggle('sel',sel.has(i));r.setAttribute('aria-checked',sel.has(i))});
+}
+function toggle(i){sel.has(i)?sel.delete(i):sel.add(i);calc()}
+document.addEventListener('click',ev=>{
+  const L=ev.target.closest('.lang button');if(L){lang=L.dataset.l;try{localStorage.setItem('doan-lang',lang)}catch(e){}render();reveal();return}
+  const r=ev.target.closest('.m-row');if(r){toggle(+r.dataset.i);return}
+  if(ev.target.closest('#m-all')){if(sel.size===7)sel.clear();else for(let i=0;i<7;i++)sel.add(i);calc();return}
+  const t=ev.target.closest('.ph-tab');if(t){cur=+t.dataset.i;phase();return}
+  const g=ev.target.closest('[data-go]');if(g){cur=+g.dataset.go;phase();$('phases').scrollIntoView({behavior:'smooth'});return}
+  const q=ev.target.closest('.acc-q');if(q){const it=q.parentElement;it.classList.toggle('open');q.setAttribute('aria-expanded',it.classList.contains('open'));return}
+  const im=ev.target.closest('[data-img]');if(im){$('lb-img').src=im.dataset.img;$('lb-img').alt=im.dataset.alt;$('lb').classList.add('on');return}
+  if(ev.target.closest('#lb')){$('lb').classList.remove('on');return}
+  if(ev.target.closest('#burger')){document.body.classList.toggle('open');return}
+  if(ev.target.closest('.menu a')){document.body.classList.remove('open')}
+});
+document.addEventListener('keydown',ev=>{
+  if(ev.key==='Escape'){$('lb').classList.remove('on');document.body.classList.remove('open')}
+  const r=ev.target.closest&&ev.target.closest('.m-row');if(r&&(ev.key===' '||ev.key==='Enter')){ev.preventDefault();toggle(+r.dataset.i)}
+});
+const hd=$('top-nav');
+function onScroll(){hd.classList.toggle('solid',scrollY>40);
+  let cs='accueil';document.querySelectorAll('main > section[id]').forEach(s=>{if(s.getBoundingClientRect().top<innerHeight*0.35)cs=s.id});
+  const map={erreurs:'apropos',objectif:'apropos'};cs=map[cs]||cs;
+  document.querySelectorAll('.menu a').forEach(a=>a.classList.toggle('on',a.dataset.s===cs))}
+addEventListener('scroll',onScroll,{passive:true});
+let io;function reveal(){if(io)io.disconnect();io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});document.querySelectorAll('.rv').forEach(el=>{el.classList.remove('in');io.observe(el)})}
+render();reveal();onScroll();
+</script>
+</body>
+</html>
