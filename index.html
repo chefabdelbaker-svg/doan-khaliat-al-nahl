@@ -143,12 +143,23 @@ header.solid{background:rgba(27,18,12,.94);backdrop-filter:blur(10px);-webkit-ba
 .gallery span{position:absolute;left:14px;bottom:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.8)}
 @media(max-width:900px){.vis-grid{grid-template-columns:1fr}.vis-fig::before{display:none}.gallery{grid-template-columns:1fr 1fr}.gallery button:nth-child(1){grid-column:1/-1;aspect-ratio:16/10}.meas{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.vis-items{grid-template-columns:1fr}}
-.plan{margin-top:clamp(48px,7vw,88px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,5vw,72px);align-items:center;border-top:1px solid rgba(220,205,178,.25);padding-top:clamp(36px,5vw,64px)}
-.plan svg{width:100%;height:auto;background:#1B120C;border:1px solid rgba(232,163,58,.4)}
-.plan svg text{font-family:'Inter',sans-serif;fill:#DCCDB2;font-size:11px;letter-spacing:.06em}
-.plan h3{font-size:clamp(28px,3.4vw,42px);margin:10px 0 14px}
-.plan p{font-size:14.5px}.plan .tiny{font-size:12px;color:#B7A68B;margin-top:14px}
+
+.plan{margin-top:clamp(48px,7vw,88px);border-top:1px solid rgba(220,205,178,.25);padding-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(20px,3vw,48px) clamp(28px,5vw,72px);align-items:start}
+.plan-head{grid-column:1/-1;max-width:70ch}
+.plan h3{font-size:clamp(30px,3.8vw,48px);margin:10px 0 14px}
+.plan-fig svg{width:100%;height:auto;display:block;border:1px solid rgba(232,163,58,.4)}
+.plan svg text{font-family:'Inter',sans-serif;letter-spacing:.04em}
+.plan-leg ol{list-style:none;counter-reset:n;display:flex;flex-direction:column;gap:12px}
+.plan-leg li{counter-increment:n;position:relative;padding-left:44px;font-size:14px;color:#DCCDB2}
+.plan-leg li::before{content:counter(n);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--amber);color:var(--deep);font-weight:700;font-size:14px;display:grid;place-items:center}
+.plan-leg li b{display:block;color:var(--cream);font-weight:600}
+.flows{margin-top:22px;border-top:1px solid rgba(220,205,178,.22);padding-top:16px;display:flex;flex-direction:column;gap:9px;font-size:13px}
+.flows div{display:flex;gap:12px;align-items:center}.flows i{display:block;width:34px;height:0;border-top:3px solid}
+.flows .f2 i{border-top-style:dashed}
+.plan .tiny{font-size:12px;color:#B7A68B;margin-top:16px}
 @media(max-width:900px){.plan{grid-template-columns:1fr}}
+.hex-bg.light{opacity:.13}
+section>.wrap{position:relative;z-index:1}
 /* PHASES */
 .ph-grid{display:grid;grid-template-columns:minmax(260px,.38fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
 .ph-tabs{display:flex;flex-direction:column;position:sticky;top:calc(var(--nav) + 20px);border-top:1px solid var(--line)}
@@ -282,14 +293,14 @@ footer{background:var(--deep);color:#B7A68B;padding:56px 0 calc(40px + env(safe-
   <div class="scroll"><i></i><span id="h-scroll"></span></div>
 </section>
 
-<section id="apropos"><div class="wrap">
+<section id="apropos"><div class="hex-bg light"></div><div class="wrap">
   <div class="sec-head rv"><span class="label" id="a-label"></span><div class="rule"></div><h2 id="a-title"></h2><p class="lead" id="a-p"></p></div>
   <div class="cards rv" id="a-cards"></div>
   <div class="sec-head rv" style="margin-bottom:12px"><span class="label" id="a-wl"></span></div>
   <div class="work rv" id="a-work"></div>
 </div></section>
 
-<section class="errs" id="erreurs"><div class="wrap">
+<section class="errs" id="erreurs"><div class="hex-bg light"></div><div class="wrap">
   <div class="sec-head rv"><span class="label" id="e-label"></span><div class="rule"></div><h2 id="e-title"></h2><p class="lead" id="e-p"></p></div>
   <div class="err-list rv" id="e-list"></div>
 </div></section>
@@ -311,21 +322,60 @@ footer{background:var(--deep);color:#B7A68B;padding:56px 0 calc(40px + env(safe-
     </div>
   </div>
   <div class="gallery rv" id="v-gal"></div>
-  <div class="plan rv"><svg viewBox="0 0 600 380" role="img" aria-labelledby="pl-t"><title id="pl-t">Schéma de principe 2D</title>
-<rect x="0" y="300" width="600" height="80" fill="#2A1C14"/><text x="20" y="345" id="pl-street"></text>
-<path d="M0 300H600" stroke="#8f7c63" stroke-dasharray="4 5"/>
-<rect x="110" y="40" width="380" height="200" fill="#241710" stroke="#B88A3E" stroke-width="2"/><text x="300" y="130" text-anchor="middle" id="pl-kit"></text><text x="300" y="150" text-anchor="middle" id="pl-kit2" style="fill:#B7A68B;font-size:10px"></text>
-<rect x="110" y="240" width="380" height="60" fill="#3a2819" stroke="#E8A33A" stroke-width="2"/>
-<rect x="250" y="236" width="100" height="8" fill="#E8A33A"/><text x="300" y="276" text-anchor="middle" id="pl-win" style="fill:#F1C77A"></text>
-<path d="M110 28H490" stroke="#E8A33A"/><path d="M110 22v12M490 22v12" stroke="#E8A33A"/><text x="300" y="18" text-anchor="middle" id="pl-w" style="fill:#E8A33A;font-weight:600"></text>
-<path d="M510 240v60" stroke="#E8A33A"/><path d="M504 240h12M504 300h12" stroke="#E8A33A"/><text x="520" y="274" id="pl-d" style="fill:#E8A33A;font-weight:600"></text>
-<circle cx="300" cy="352" r="9" fill="#E8A33A"/><path d="M300 340V312" stroke="#E8A33A" stroke-width="2"/><path d="M296 318l4-8 4 8" fill="#E8A33A"/><text x="318" y="356" id="pl-cour"></text>
-<path d="M300 180V222" stroke="#F1C77A" stroke-width="2"/><path d="M295 214l5 10 5-10" fill="#F1C77A"/><text x="312" y="205" id="pl-flow" style="fill:#F1C77A"></text>
-<path d="M60 345l18 0" stroke="none"/></svg>
-<div><span class="label" id="pl-label"></span><h3 id="pl-h"></h3><p id="pl-p"></p><p class="tiny" id="pl-n"></p></div></div>
+  <div class="plan rv"><div class="plan-head"><span class="label" id="pl-label"></span><h3 id="pl-h"></h3><p id="pl-p"></p></div>
+<div class="plan-fig"><svg viewBox="0 0 800 640" role="img" aria-label="Plan de principe à l'échelle">
+<defs><pattern id="hat" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v8" stroke="#E8A33A" stroke-width="1" opacity=".35"/></pattern>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs>
+<rect width="800" height="640" fill="#1B120C"/>
+<!-- street -->
+<rect x="0" y="526.0" width="800" height="114.0" fill="#2A1C14"/><path d="M0 526.0H800" stroke="#8f7c63" stroke-dasharray="5 6"/>
+<!-- footprint -->
+<rect x="130" y="70" width="494.0" height="416.0" fill="#241710"/>
+<!-- production visible (left) -->
+<rect x="130" y="70" width="260.0" height="416.0" fill="url(#hat)"/>
+<!-- shelf -->
+<rect x="416.0" y="271.5" width="130.0" height="65.0" fill="#3a2819" stroke="#E8A33A" stroke-width="2"/>
+<!-- order counter -->
+<rect x="546.0" y="161.0" width="78.0" height="175.5" fill="#3a2819" stroke="#E8A33A" stroke-width="2"/>
+<!-- recess cutout -->
+<rect x="416.0" y="382.00000000000006" width="130.0" height="104.0" fill="#2A1C14" stroke="none"/>
+<!-- walls (thick) -->
+<path d="M130 486.0V70H416.0M546.0 70H624.0V486.0H546.0M416.0 486.0H130" fill="none" stroke="#B88A3E" stroke-width="5"/>
+<path d="M416.0 486.0V382.00000000000006H546.0V486.0" fill="none" stroke="#B88A3E" stroke-width="5"/>
+<!-- glass vitrine -->
+<path d="M143.0 486.0H403.0" stroke="#9FD3E6" stroke-width="5" opacity=".9"/>
+<!-- window -->
+<path d="M429.0 382.00000000000006H533.0" stroke="#E8A33A" stroke-width="7"/>
+<!-- kitchen opening (top) -->
+<path d="M416.0 70H546.0" stroke="#F1C77A" stroke-width="3" stroke-dasharray="3 7"/>
+<!-- flows -->
+<path d="M481.0 520.0V396.00000000000006" stroke="#E8A33A" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+<path d="M481.0 66V226.0" stroke="#D98E2B" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+<path d="M461.5 340.5V376.00000000000006" stroke="#F4E6C8" stroke-width="3" stroke-dasharray="6 5" fill="none" marker-end="url(#ar)"/>
+<path d="M540.0 213.0H495.0V265.5" stroke="#F4E6C8" stroke-width="3" stroke-dasharray="6 5" fill="none" marker-end="url(#ar)"/>
+<!-- numbers -->
+<g><circle cx="481.0" cy="456.0" r="15" fill="#E8A33A"/><text x="481.0" y="462.0" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#1B120C;letter-spacing:0">1</text></g>
+<g><circle cx="559.0" cy="378.00000000000006" r="15" fill="#E8A33A"/><text x="559.0" y="384.00000000000006" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#1B120C;letter-spacing:0">2</text></g>
+<g><circle cx="481.0" cy="305.5" r="15" fill="#E8A33A"/><text x="481.0" y="311.5" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#1B120C;letter-spacing:0">3</text></g>
+<g><circle cx="585.0" cy="317.0" r="15" fill="#E8A33A"/><text x="585.0" y="323.0" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#1B120C;letter-spacing:0">4</text></g>
+<g><circle cx="481.0" cy="128.5" r="15" fill="#E8A33A"/><text x="481.0" y="134.5" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#1B120C;letter-spacing:0">5</text></g>
+<g><circle cx="260.0" cy="278.0" r="15" fill="#E8A33A"/><text x="260.0" y="284.0" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#1B120C;letter-spacing:0">6</text></g>
+<!-- dims -->
+<path d="M130 42H624.0M130 34v16M624.0 34v16" stroke="#E8A33A" fill="none"/><text x="377.0" y="30" text-anchor="middle" id="pl-w" style="font-size:15px;fill:#E8A33A;font-weight:600"></text>
+<path d="M652.0 382.00000000000006V486.0M644.0 382.00000000000006h16M644.0 486.0h16" stroke="#E8A33A" fill="none"/><text x="666.0" y="439.00000000000006" id="pl-d" style="font-size:15px;fill:#E8A33A;font-weight:600"></text>
+<path d="M102 70V486.0M94 70h16M94 486.0h16" stroke="#8f7c63" fill="none"/><text transform="translate(90 278.0) rotate(-90)" text-anchor="middle" id="pl-dd" style="font-size:13px;fill:#B7A68B"></text>
+<text x="260.0" y="498.0" text-anchor="middle" id="pl-glass" style="font-size:12px;fill:#9FD3E6"></text>
+<text x="149.5" y="554.0" id="pl-street" style="font-size:12px;fill:#B7A68B"></text>
+<text x="260.0" y="115.5" text-anchor="middle" id="pl-kit" style="font-size:12px;fill:#B7A68B"></text>
+<!-- scale -->
+<path d="M130 610h130" stroke="#F5EBDA" stroke-width="3"/><path d="M130 603v14M260 603v14" stroke="#F5EBDA"/><text x="270" y="615" id="pl-sc" style="font-size:13px;fill:#F5EBDA"></text>
+</svg></div>
+<div class="plan-leg"><ol id="pl-leg"></ol>
+<div class="flows" id="pl-flows"></div>
+<p class="tiny" id="pl-n"></p></div></div>
 </div></section>
 
-<section id="phases"><div class="wrap">
+<section id="phases"><div class="hex-bg light"></div><div class="wrap">
   <div class="sec-head rv"><span class="label" id="p-label"></span><div class="rule"></div><h2 id="p-title"></h2></div>
   <div class="ph-grid rv"><div class="ph-tabs" id="ph-tabs" role="tablist"></div><div class="ph-panel" id="ph-panel" role="tabpanel" aria-live="polite"></div></div>
 </div></section>
@@ -337,12 +387,12 @@ footer{background:var(--deep);color:#B7A68B;padding:56px 0 calc(40px + env(safe-
   <div class="commit rv" id="s-cm" style="margin-top:18px"></div>
 </div></section>
 
-<section id="conditions"><div class="wrap">
+<section id="conditions"><div class="hex-bg light"></div><div class="wrap">
   <div class="sec-head rv"><span class="label" id="t-label"></span><div class="rule"></div><h2 id="t-title"></h2></div>
   <div class="acc rv" id="t-acc"></div>
 </div></section>
 
-<section class="mission" id="mission"><div class="wrap">
+<section class="mission" id="mission"><div class="hex-bg light"></div><div class="wrap">
   <div class="sec-head rv"><span class="label" id="m-label"></span><div class="rule"></div><h2 id="m-title"></h2><p class="lead" id="m-note"></p></div>
   <div class="m-grid rv">
     <div><div class="m-rows" id="m-rows"></div><button class="m-all" id="m-all"></button></div>
@@ -1401,7 +1451,11 @@ const UI={
   sel:'VOTRE SÉLECTION',tot0:'Aucune phase sélectionnée',wa:'Envoyer ma sélection sur WhatsApp',all:'Tout sélectionner',none:'Tout désélectionner',
   netbadge:'PRIX RÉSEAU −25 %',hintAll:'Parcours complet, de la conception à l\'ouverture. Prix non divisible, offre valable jusqu\'au 9 décembre 2026.',
   hintSome:'Tarif catalogue, toutes taxes comprises. Le prix réseau −25 % s\'applique au parcours complet (7 phases).',phases:'phase(s)',
-  plan:{label:'SCHÉMA DE PRINCIPE',h:'Un seul geste : commander, retirer, repartir.',p:"La façade de 3,8 m ne sert qu'à la vente : la commande entre par la fenêtre de retrait, le coursier ne pénètre jamais dans la cuisine. Un flux simple, sans salle ni croisement.",n:'Principe indicatif, non coté ni contractuel. Le plan détaillé est livré en phase 3.',street:'RUE / TROTTOIR',kit:'CUISINE CENTRALE',kit2:'agencement détaillé en phase 3',win:'RETRAIT',w:'3,8 m (façade)',d:'≈ 80 cm',cour:'Coursier / client',flow:'commande'},
+  plan:{label:'PLAN DE PRINCIPE · ÉCHELLE 1/50',h:'Un seul geste : commander, retirer, repartir.',p:"La façade de 3,8 m est dédiée à la vente. Le coursier reste dans le retrait, la commande passe par la fenêtre, et l'équipe ne croise jamais le flux extérieur. Aucune salle, aucune livraison ni déchet ne traverse cette zone.",
+ w:'3,80 m (façade)',d:'0,80 m',dd:'3,20 m (hypothèse)',glass:'VITRINE VITRÉE',street:'RUE / TROTTOIR',kit:'PRODUCTION VISIBLE',sc:'1 m',
+ zones:[['Retrait · 1,0 × 0,8 m',"Le coursier ou le client s'arrête ici, à l'abri, sans jamais entrer."],['Fenêtre de remise · ≈ 0,9 m',"Une seule ouverture coulissante, avec la plaque « Pick up here » à hauteur de main."],['Étagère de remise',"Sacs fermés et numérotés, prêts à être remis, posés juste derrière la fenêtre."],['Poste commandes et emballage',"Tablette, imprimante de tickets et plan d'emballage, à droite de l'étagère."],['Passage équipe',"Un seul accès vers la cuisine centrale, côté angle, sans croiser le retrait."],['Vitrine sur la production',"Vitre fixe : le client voit le travail, mais rien n'y est remis."]],
+ flows:[['Coursier / client','#E8A33A',''],['Équipe','#D98E2B',''],['Commande (sacs)','#F4E6C8','f2']],
+ n:"Principe indicatif. Profondeur de 3,20 m retenue comme hypothèse de dessin, côtes à confirmer sur site. Le plan coté et les équipements sont livrés en phase 3 (Menu, layout et équipements)."},
   ill:"Illustration d'ambiance, non contractuelle.",close:'Fermer',
   wam:(sel,total,net)=>`Bonjour Abdelhafid, je suis intéressé par la proposition DOAN · Khaliat Al Nahl.\nPhases choisies : ${sel||'—'}\n${net?'Parcours complet (prix réseau −25 %)':'Tarif catalogue'} : ${total} SAR TTC.`},
  en:{menu:[['accueil','Home'],['apropos','About us'],['vision','Your vision'],['phases','The 7 phases'],['perimetre','Scope'],['conditions','Terms'],['mission','Your mission']],
@@ -1411,7 +1465,11 @@ const UI={
   sel:'YOUR SELECTION',tot0:'No phase selected',wa:'Send my selection on WhatsApp',all:'Select all',none:'Clear all',
   netbadge:'NETWORK PRICE −25%',hintAll:'Full journey, from design to opening. Indivisible price, offer valid until 9 December 2026.',
   hintSome:'Catalogue price, all taxes included. The −25% network price applies to the full journey (7 phases).',phases:'phase(s)',
-  plan:{label:'PRINCIPLE DIAGRAM',h:'One gesture: order, collect, go.',p:'The 3.8 m frontage is for selling only: orders pass through the pick-up window and couriers never enter the kitchen. A simple flow, with no dining room and no crossing.',n:'Indicative principle, not to scale or contractual. The detailed plan is delivered in phase 3.',street:'STREET / PAVEMENT',kit:'CENTRAL KITCHEN',kit2:'detailed layout in phase 3',win:'PICK-UP',w:'3.8 m (frontage)',d:'≈ 80 cm',cour:'Courier / customer',flow:'order'},
+  plan:{label:'PRINCIPLE PLAN · SCALE 1/50',h:'One gesture: order, collect, go.',p:'The 3.8 m frontage is dedicated to selling. Couriers stay in the recess, orders pass through the window, and the team never crosses the outside flow. No dining room, delivery or waste passes through this zone.',
+ w:'3.80 m (frontage)',d:'0.80 m',dd:'3.20 m (assumption)',glass:'GLAZED SHOWCASE',street:'STREET / PAVEMENT',kit:'VISIBLE PRODUCTION',sc:'1 m',
+ zones:[['Recess · 1.0 × 0.8 m','The courier or customer stops here, sheltered, and never steps inside.'],['Hand-over window · ≈ 0.9 m','A single sliding opening, with the “Pick up here” sign at hand height.'],['Hand-over shelf','Sealed, numbered bags ready to be handed over, just behind the window.'],['Order and packing station','Tablet, ticket printer and packing counter, to the right of the shelf.'],['Staff passage','A single access to the central kitchen, on the corner side, without crossing the recess.'],['Production showcase','Fixed glass: the customer sees the work, but nothing is handed over here.']],
+ flows:[['Courier / customer','#E8A33A',''],['Team','#D98E2B',''],['Order (bags)','#F4E6C8','f2']],
+ n:'Indicative principle. A 3.20 m depth is taken as a drawing assumption, dimensions to be confirmed on site. The dimensioned plan and equipment are delivered in phase 3 (Menu, layout and equipment).'},
   ill:'Mood illustration, non-contractual.',close:'Close',
   wam:(sel,total,net)=>`Hello Abdelhafid, I am interested in the DOAN · Khaliat Al Nahl proposal.\nSelected phases: ${sel||'—'}\n${net?'Full journey (network price −25%)':'Catalogue price'}: ${total} SAR incl. taxes.`}
 };
@@ -1442,7 +1500,9 @@ function render(){
   $('v-note').textContent=v.note;
   const gi=['detail-wall','detail-pickup','detail-avenue'];
   $('v-gal').innerHTML=gi.map((g,i)=>`<button data-img="assets/${g}.jpg" data-alt="${esc(u.galalt[i])}"><img src="assets/${g}.jpg" alt="${esc(u.galalt[i])}" ><span>${esc(u.gal[i])}</span></button>`).join('');
-  const pl=u.plan;[['label','label'],['h','h'],['p','p'],['n','n'],['street','street'],['kit','kit'],['kit2','kit2'],['win','win'],['w','w'],['d','d'],['cour','cour'],['flow','flow']].forEach(([i,k])=>{$('pl-'+i).textContent=pl[k]});
+  const pl=u.plan;['label','h','p','n','w','d','dd','glass','street','kit','sc'].forEach(k=>{$('pl-'+k).textContent=pl[k]});
+  $('pl-leg').innerHTML=pl.zones.map(z=>`<li><b>${esc(z[0])}</b>${esc(z[1])}</li>`).join('');
+  $('pl-flows').innerHTML=pl.flows.map(f=>`<div class="${f[2]}"><i style="border-color:${f[1]}"></i>${esc(f[0])}</div>`).join('');
   $('p-label').textContent=u.ph;$('p-title').innerHTML=`${esc(u.phasesTitle[0])} <em>${esc(u.phasesTitle[1])}</em>`;
   $('ph-tabs').innerHTML=d.phases.map((p,i)=>`<button class="ph-tab${i===cur?' on':''}" role="tab" data-i="${i}"><span class="n">${p.num}</span><span>${esc(p.title)}</span></button>`).join('');
   phase();
