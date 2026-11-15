@@ -45,18 +45,47 @@ tr.tot td{border-bottom:0;font-weight:600;color:var(--ink)}tr.tot.big td{font-fa
 .done code{display:block;font-size:11.5px;word-break:break-all;color:#F1C77A;margin-top:6px}
 .sigs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px;margin-top:30px}
 .sg{border-top:1.5px solid var(--ink);padding-top:8px;font-size:13px}.sg b{display:block;color:var(--ink);font-family:var(--serif);font-weight:500;font-size:24px}
-@media(max-width:700px){.cols,.pay,.sigs{grid-template-columns:1fr}h2{flex-direction:column;gap:2px}}
-@media print{body{background:#fff}.hex,.noprint,.btn,.done .row{display:none!important}.sheet{box-shadow:none;border:0;padding:0}.top{background:#fff;color:#000}.sign{break-inside:avoid}h2{break-after:avoid}table,.pay{break-inside:avoid}.done{background:#fff;color:#000}.done h3{color:#000}.done code{color:#555}}
+
+.cover{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:620px;background:var(--deep);color:var(--cream);overflow:hidden}
+.cover .hexl{position:absolute;inset:0;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cg fill='none' stroke='%23E8A33A' stroke-width='1.2'%3E%3Cpath d='M28 2l26 15v30L28 62 2 47V17z'/%3E%3Cpath d='M28 62v33M2 47L-24 62M54 47l26 15'/%3E%3C/g%3E%3C/svg%3E");background-size:56px 97px}
+.cover .cl{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;gap:36px;padding:28px max(24px,env(safe-area-inset-left,0px)) 30px max(24px,calc((100vw - 1180px)/2 + 24px))}
+.cover .cr{position:relative;background:url(assets/facade.jpg) center 34%/cover no-repeat;min-height:320px}
+.cover .cr::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--deep) 0%,rgba(27,18,12,.55) 22%,rgba(27,18,12,0) 55%)}
+.brand{display:flex;align-items:center;gap:12px}.brand svg{height:34px;width:auto}.brand b{font-family:'Montserrat',sans-serif;letter-spacing:.14em;font-size:17px}
+.cover .ln{display:flex;align-items:center;gap:14px;margin-bottom:18px}.cover .ln i{width:34px;height:2px;background:var(--amber)}.cover .ln span{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);font-weight:600}
+.cover h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,7vw,92px);line-height:.98;color:var(--cream);margin:0 0 14px}.cover h1 em{font-style:italic;color:var(--amber)}
+.cover .sub{font-size:17px;color:#DCCDB2;margin:0 0 4px}.cover .tag{font-family:var(--serif);font-style:italic;font-size:22px;color:#F1C77A;margin:0}
+.cinfo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px;border-top:1px solid rgba(220,205,178,.25);padding-top:18px;font-size:14px;color:var(--cream)}
+.cinfo span{display:block;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#B7A68B;margin-bottom:3px}
+.sheet{max-width:980px}
+.band{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 30px;flex-wrap:wrap;background:var(--deep);color:var(--cream);margin:calc(-1*clamp(28px,6vw,64px)) calc(-1*clamp(20px,6vw,64px)) 28px;padding:30px clamp(20px,6vw,64px);border-bottom:3px solid var(--amber)}
+.band h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,46px);line-height:1;margin:0;color:var(--cream)}.band h1 em{font-style:italic;color:var(--amber)}
+.band small{display:block;text-align:right;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#B7A68B;line-height:1.9}.band small b{color:var(--cream);font-weight:600;letter-spacing:.12em}
+.feecard{background:var(--deep);color:var(--cream);border-left:4px solid var(--amber);padding:clamp(22px,4vw,34px);margin:16px 0 18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px 36px;align-items:center}
+.feecard .k{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);font-weight:600;display:block;margin-bottom:8px}
+.feecard .big{font-family:var(--serif);font-size:clamp(46px,7vw,68px);line-height:1;color:var(--cream)}.feecard .big small{font-size:.38em;color:#B7A68B;margin-left:6px}
+.feecard .was{font-size:13px;color:#B7A68B;margin-top:8px}.feecard .was s{color:#8E7E66}
+.feecard .chip{display:inline-block;margin-top:12px;background:var(--amber);color:var(--deep);font-size:10px;letter-spacing:.18em;font-weight:700;padding:6px 12px;border-radius:99px}
+.bar{display:flex;gap:4px;height:9px;margin:10px 0 14px}.bar i{display:block;border-radius:2px}.bar i:nth-child(1){flex:50;background:var(--amber)}.bar i:nth-child(2){flex:25;background:var(--brass)}.bar i:nth-child(3){flex:25;background:#F4E6C8}
+.steps{display:flex;flex-direction:column;gap:12px;font-size:12.5px;color:#DCCDB2}.steps>div{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:2px 16px;align-items:baseline}.steps b{display:block;font-family:var(--serif);font-weight:500;font-size:26px;color:var(--cream);line-height:1.05}.steps em{font-style:normal;color:var(--amber);font-weight:600}
+.after{margin-top:34px}.after .label{display:block;margin-bottom:8px}.after ol{list-style:none;padding:0;display:flex;flex-direction:column;border-top:1.5px solid var(--ink)}.after li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:baseline}.after li::marker{content:""}
+.after .n{font-family:var(--serif);font-size:26px;color:var(--honey);line-height:1}.after b{color:var(--ink);font-family:var(--serif);font-weight:500;font-size:20px}.after span.d{grid-column:2;color:var(--muted);font-size:13px}
+.sign h2 em{font-style:italic;color:var(--honey)}
+.ft{position:relative;max-width:980px;margin:-1px auto 0;height:300px;background:linear-gradient(180deg,#fff8ec 0%,rgba(255,248,236,.55) 30%,rgba(27,18,12,.35) 100%),url(assets/detail-wall.jpg) center/cover no-repeat;border:1px solid var(--line);border-top:0;display:flex;align-items:flex-end;padding:22px clamp(20px,6vw,64px);color:var(--cream);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+@media(max-width:820px){.cover{grid-template-columns:1fr}.cover .cr{order:-1;min-height:260px}.cover .cr::before{background:linear-gradient(0deg,var(--deep) 0%,rgba(27,18,12,0) 60%)}.cover .cl{padding:24px max(20px,env(safe-area-inset-left,0px)) 28px}.feecard{grid-template-columns:1fr}.steps>div{grid-template-columns:1fr}.band small{text-align:left}}
+@media(max-width:700px){.cols,.sigs{grid-template-columns:1fr}h2{flex-direction:column;gap:2px}}
+@media print{.cover .cr,.ft{display:none}body{background:#fff}.hex,.noprint,.btn,.done .row{display:none!important}.sheet{box-shadow:none;border:0;padding:0}.top{background:#fff;color:#000}.sign{break-inside:avoid}h2{break-after:avoid}table,.pay{break-inside:avoid}.done{background:#fff;color:#000}.done h3{color:#000}.done code{color:#555}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="mk" stroke-width="2.6" stroke-linejoin="round" stroke="#F5EBDA"><polygon points="0.0,-27.0 23.4,-13.5 23.4,13.5 0.0,27.0 -23.4,13.5 -23.4,-13.5" fill="#E8A33A"/><polygon points="-26.0,18.0 -2.6,31.5 -2.6,58.5 -26.0,72.0 -49.4,58.5 -49.4,31.5" fill="#C97B16"/><polygon points="26.0,18.0 49.4,31.5 49.4,58.5 26.0,72.0 2.6,58.5 2.6,31.5" fill="#F4E6C8"/></g></defs></svg>
 <div class="hex"></div>
-<div class="top"><div class="in"><div class="brand"><svg viewBox="-52 -30 104 106"><use href="#mk"/></svg><b>DOAN</b></div><small>NAYISSORIA ADVISORY · From Vision to Execution</small></div></div>
+<header class="cover"><div class="hexl"></div>
+ <div class="cl"><div class="brand"><svg viewBox="-52 -30 104 106"><use href="#mk"/></svg><b>DOAN</b></div>
+  <div><div class="ln"><i></i><span>NAYISSORIA ADVISORY · 360°</span></div>
+   <h1>Support <em>Agreement</em></h1><p class="sub">DOAN · Khaliat Al Nahl, Rabwa, Riyadh</p><p class="tag">From Vision to Execution.</p></div>
+  <div class="cinfo"><div><span>Project</span>DOAN · Khaliat Al Nahl</div><div><span>Site</span>Rabwa, Riyadh</div><div><span>Reference</span>NAY-KAN-2026-001</div><div><span>Date · Validity</span>15 November 2026<br>until 9 December 2026</div></div></div>
+ <div class="cr" role="img" aria-label="DOAN pick-up facade, Rabwa, Riyadh"></div></header>
 <main class="sheet">
-<span class="label">Support Agreement</span>
-<h1>Support <em>360°</em></h1>
-<p style="font-size:17px;color:var(--ink);font-family:var(--serif);font-style:italic">DOAN · Khaliat Al Nahl, Rabwa, Riyadh</p>
-<div class="rule"></div>
-<div class="meta"><span>REF. <b>NAY-KAN-2026-001</b></span><span>DATE <b>15 November 2026</b></span><span>OFFER VALID UNTIL <b>9 December 2026</b></span></div>
+<div class="band"><h1>Support <em>Agreement 360°</em></h1><small>Reference <b>NAY-KAN-2026-001</b><br>Date <b>15 November 2026</b> · Offer valid until <b>9 December 2026</b></small></div>
 
 <h2><span class="n">1</span>Parties</h2>
 <div class="cols">
@@ -86,7 +115,8 @@ tr.tot td{border-bottom:0;font-weight:600;color:var(--ink)}tr.tot.big td{font-fa
 
 <h2><span class="n">5</span>Fees and payment</h2>
 <p>The fee for the full journey is <b style="color:var(--ink)">54,750 SAR, final amount</b> (catalogue price 73,000 SAR, network price −25%), payable by bank transfer in SAR in three instalments:</p>
-<div class="pay"><div><span class="p">AT SIGNATURE</span><b>27,375</b><small>50% · SAR, final</small></div><div><span class="p">LAYOUT AND BUDGET VALIDATED · W5, 17 DEC 2026</span><b>13,687.50</b><small>25% · SAR, final</small></div><div><span class="p">START OF PHASE 7 · W7, 27 DEC 2026</span><b>13,687.50</b><small>25% · SAR, final</small></div></div>
+<div class="feecard"><div><span class="k">Full journey · 7 phases</span><div class="big">54,750<small>SAR</small></div><div class="was">Final amount, no VAT · catalogue value <s>73,000</s></div><span class="chip">NETWORK PRICE −25%</span></div>
+<div><span class="k">Payment · three instalments</span><div class="bar"><i></i><i></i><i></i></div><div class="steps"><div><b>50% · 27,375</b><span>At signature</span></div><div><b>25% · 13,687.50</b><span>Layout and budget validated · <em>W5, 17 Dec 2026</em></span></div><div><b>25% · 13,687.50</b><span>Start of phase 7 · <em>W7, 27 Dec 2026</em></span></div></div></div></div>
 <p>Each instalment is due when its milestone is reached, or on the date shown if the milestone is delayed by the Client. Each payment request is payable within 7 days. The work on a phase may be suspended while a payment is overdue by more than 7 days. <b style="color:var(--ink)">Price and discount.</b> The network price already includes a 25% reduction on the catalogue price (18,250 SAR). No further reduction applies. <b style="color:var(--ink)">Taxes.</b> The Consultant is not VAT-registered, and the Client confirms it was informed of this before signing and accepts the fees as final amounts. Any earlier wording such as "all taxes included" means that the amount quoted is the final amount to pay. The fees are final amounts: no VAT is charged or itemised, and no VAT recovery is available on these fees. Any change in the invoicing party or in the tax treatment is agreed in writing before the next payment request. The network price applies to the full journey only. If the journey is stopped before its end, the network price is cancelled and the phases completed are charged at the catalogue price. Amounts already paid are set against them; any balance is payable within 7 days and any surplus is refunded within 14 days.</p>
 <p class="note">Each phase is invoiced in full. If only some parts of a phase are selected, the price of the phase remains unchanged.</p>
 
@@ -120,13 +150,18 @@ tr.tot td{border-bottom:0;font-weight:600;color:var(--ink)}tr.tot.big td{font-fa
 <p>This document is the entire agreement between the parties for this support. It may be accepted electronically: the Client's acceptance below, with the name, title and date entered, has the value of a signature. The Consultant keeps the accepted version, the signatory's details and the acceptance message received. Any later change is made in writing.</p>
 
 <div class="sign">
- <h2>Signatures</h2>
+ <h2>Accept, <em>and start.</em></h2>
  <div class="sigs">
   <div class="sg"><span class="label">For the Consultant</span><b>Abdelhafid Arbi</b>Trading as NAYISSORIA ADVISORY · 15 November 2026</div>
   <div class="sg"><span class="label">For the Client</span>
    <label class="fld"><span>Name of the signatory</span><input id="f-sn" autocomplete="name"></label>
    <label class="fld"><span>Title / position</span><input id="f-st" autocomplete="organization-title"></label></div>
  </div>
+
+ <div class="after"><span class="label">After your signature</span><ol>
+  <li><span class="n">1</span><b>Payment request</b><span class="d">First instalment, 27,375 SAR, before the start.</span></li>
+  <li><span class="n">2</span><b>Kick-off call</b><span class="d">Documents to provide: dimensioned plan, photos, briefing questionnaire.</span></li>
+  <li><span class="n">3</span><b>Phase 1 starts</b><span class="d">Scoping and premises feasibility, from the week of 15 November 2026.</span></li></ol></div>
  <label class="chk"><input type="checkbox" id="f-ok"><span>I have read and accept the terms of this agreement, including that the fees are final amounts with no VAT.</span></label>
  <div class="err" id="err" role="alert"></div>
  <button class="btn noprint" id="go">Sign the agreement</button>
@@ -136,6 +171,7 @@ tr.tot td{border-bottom:0;font-weight:600;color:var(--ink)}tr.tot.big td{font-fa
   <p class="note" style="color:#B7A68B">Please send the acceptance on WhatsApp so that it reaches the Consultant. The Consultant then sends the payment request for the first instalment.</p></div>
 </div>
 </main>
+<div class="ft">NAYISSORIA ADVISORY · Riyadh, Saudi Arabia · +966 50 788 1567</div>
 <script>
 const CONSULTANT={cr:'',vat:''};
 const $=id=>document.getElementById(id);
@@ -149,7 +185,7 @@ $('go').addEventListener('click',async()=>{
   if(!$('f-ok').checked){$('err').textContent='Please tick the box to accept the terms.';return}
   $('err').textContent='';
   const d=new Date(),ds=d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear()+', '+d.toTimeString().slice(0,5)+' (local time)';
-  const body=document.querySelector('main').innerText.split('Signatures')[0];
+  const body=document.querySelector('main').innerText.split('Accept, and start.')[0];
   const v={name:$('f-name').value.trim(),addr:$('f-addr').value.trim(),vat:$('f-vat').value.trim(),cr:$('f-cr').value.trim(),sn:$('f-sn').value.trim(),st:$('f-st').value.trim()};
   let h='n/a';try{h=await sha(body+JSON.stringify(v)+ds)}catch(e){}
   const ref='NAY-KAN-2026-001 / '+h.slice(0,12).toUpperCase();
